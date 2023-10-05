@@ -33,5 +33,12 @@
     "title": "3  Para quem é este livro",
     "section": "",
     "text": "Primeiramente este livro foi feito para meus seguidores no X (antigo Twitter), rede a qual eu posto conteúdo sobre OSINT (Open Source Intelligent). Também é direcionado a profissionais da área, pesquisadores e interessados em investigações em dados abertos.\nSe você usa ou planeja usar as ferramentas de código aberto escritas em Python, mas você não está satisfeito com as funcionalidades padrã e gostaria de modifica-las um pouco, este livro ajudará você a fazer isto rapidamente.\nEste livro ajudará também a automatizar várias tarefas de rotinas em investigações: processar dados de uma API, coletar dados de websites, criar relatórios e visualização de dados.\nO principal objetivo deste livro não é ensinar a você escrever código Python, mas te ensinar a gastar menos tempo nas tarefas de rotina em OSINT. Além disso, para os códigos de exemplo, também darei links para diferentes serviços que te ajudarão a resolver problemas diferentes.\nEste livro também pode ser útil para melhorar o nível técnico daqueles que não possuem conhecimento de Ciências da Computação e quer tentar usar Linux, aprender a usar linhas de comandos e entender termos de TI como “JSON”, “API”, “WHOIS” etc."
+  },
+  {
+    "objectID": "pag3.html",
+    "href": "pag3.html",
+    "title": "4  Para quem não é este livro",
+    "section": "",
+    "text": "Para quem não conheçe OSINT ou prentende iniciar a partir daqui. A maior parte deste livro é direcionado a tópicos sobre investigação e coleta de dados.\nPara aqueles que querem aprender Python, sugiro procurar cursos e/ou tutoriais (existem alguns na Escola de Dados) e depois voltar aqui.\nEste livro não aborda muitas coisas importantes e algumas coisas talvez sejam até consideradas uma má prática. Existem coisas que não importam se escritas no contexto de automação de tarefas em OSINT, mas que podem ser extremamente importantes em grandes projetos."
   }
 ]

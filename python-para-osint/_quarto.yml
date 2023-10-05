@@ -11,6 +11,7 @@ book:
     - summary.qmd
     - references.qmd
     - pag2.qmd
+    - pag3.qmd
 
 bibliography: references.bib
 
