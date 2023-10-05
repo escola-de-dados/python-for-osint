@@ -1,0 +1,11 @@
+# **Para quem &#233; este livro**
+
+Primeiramente este livro foi feito para meus [seguidores no X](https://twitter.com/cyb_detective) (antigo Twitter), rede a qual eu posto conte&#250;do sobre OSINT (Open Source Intelligent). Tamb&#233;m &#233; direcionado a profissionais da &#225;rea, pesquisadores e interessados em investiga&#231;&#245;es em dados abertos.
+
+Se voc&#234; usa ou planeja usar as ferramentas de c&#243;digo aberto escritas em Python, mas voc&#234; n&#227;o est&#225; satisfeito com as funcionalidades padr&#227; e gostaria de modifica-las um pouco, este livro ajudar&#225; voc&#234; a fazer isto rapidamente. 
+
+Este livro ajudar&#225; tamb&#233;m a automatizar v&#225;rias tarefas de rotinas em investiga&#231;&#245;es: processar dados de uma API, coletar dados de websites, criar relat&#243;rios e visualiza&#231;&#227;o de dados.
+
+O principal objetivo deste livro n&#227;o &#233; ensinar a voc&#234; escrever c&#243;digo Python, mas te ensinar a gastar menos tempo nas tarefas de rotina em OSINT. Al&#233;m disso, para os c&#243;digos de exemplo, tamb&#233;m darei links para diferentes servi&#231;os que te ajudar&#227;o a resolver problemas diferentes.
+
+Este livro tamb&#233;m pode ser &#250;til para melhorar o n&#237;vel t&#233;cnico daqueles que n&#227;o possuem conhecimento de Ci&#234;ncias da Computa&#231;&#227;o e quer tentar usar Linux, aprender a usar linhas de comandos e entender termos de TI como "JSON", "API", "WHOIS" etc. 
