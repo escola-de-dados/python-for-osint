@@ -1,0 +1,21 @@
+# Como usar este livro
+
+A primeira coisa que aconselho fazer &#233; folhear as p&#225;ginas, dar uma olhada geral no conte&#250;do e decidir se este livro ser&#225; &#250;til para voc&#234;.
+
+Tomada esta decis&#227;o, estude o assunto de acordo com a sugest&#227;o de dia, durante 21 dias, pensando sempre em como voc&#234; pode aplicar os aprendizados em suas investiga&#231;&#245;es. Se acontecer de perder um dia, ou at&#233; uma semana, por favor n&#227;o seja duro consigo mesmo e continue de onde parou.
+
+Tamb&#233;m sugiro que voc&#234; execute todos os exemplos de c&#243;digos, que est&#227;o dispon&#237;veis neste reposit&#243;rio: [https://github.com/cipher387/python-for-OSINT-21-days](https://github.com/cipher387/python-for-OSINT-21-days).
+
+Este livro &#233; totalmente gratu&#237;to. No in&#237;cio pensei em vender, mas como os assinantes da minha newsletter est&#227;o espalhados por todo o mundo e possuem diferentes n&#237;veis de renda, eu decidi disponibilizar sem restri&#231;&#245;es. 
+
+
+![](img/cover.png){fig-align="center"}
+
+
+Mas para incentivar sua disciplina e te motivar a chegar at&#233; o fim, recomendo que fa&#231;a uma doa&#231;&#227;o. Infelizmente, pessoas que fazem cursos gratu&#237;tos nem sempre finalizam. Doando voc&#234; me motivar&#225; a disponibilizar mais livros e&#47;ou cursos sobre OSINT de gra&#231;a. 
+
+O valor da doa&#231;&#227;o quem determina &#233; voc&#234;&#33;
+
+As doa&#231;&#245;es podem ser feitas via cart&#227;o de cr&#233;dito ou PayPal: [https://boosty.to/cyb_detective](https://boosty.to/cyb_detective).
+
+Se por alguma raz&#227;o voc&#234; n&#227;o quiser/puder doar, ficarei muito feliz se estudares todo o livro.

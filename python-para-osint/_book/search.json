@@ -40,5 +40,12 @@
     "title": "4  Para quem não é este livro",
     "section": "",
     "text": "Para quem não conheçe OSINT ou prentende iniciar a partir daqui. A maior parte deste livro é direcionado a tópicos sobre investigação e coleta de dados.\nPara aqueles que querem aprender Python, sugiro procurar cursos e/ou tutoriais (existem alguns na Escola de Dados) e depois voltar aqui.\nEste livro não aborda muitas coisas importantes e algumas coisas talvez sejam até consideradas uma má prática. Existem coisas que não importam se escritas no contexto de automação de tarefas em OSINT, mas que podem ser extremamente importantes em grandes projetos."
+  },
+  {
+    "objectID": "pag4.html",
+    "href": "pag4.html",
+    "title": "5  Como usar este livro",
+    "section": "",
+    "text": "A primeira coisa que aconselho fazer é folhear as páginas, dar uma olhada geral no conteúdo e decidir se este livro será útil para você.\nTomada esta decisão, estude o assunto de acordo com a sugestão de dia, durante 21 dias, pensando sempre em como você pode aplicar os aprendizados em suas investigações. Se acontecer de perder um dia, ou até uma semana, por favor não seja duro consigo mesmo e continue de onde parou.\nTambém sugiro que você execute todos os exemplos de códigos, que estão disponíveis neste repositório: https://github.com/cipher387/python-for-OSINT-21-days.\nEste livro é totalmente gratuíto. No início pensei em vender, mas como os assinantes da minha newsletter estão espalhados por todo o mundo e possuem diferentes níveis de renda, eu decidi disponibilizar sem restrições.\n\n\n\n\n\nMas para incentivar sua disciplina e te motivar a chegar até o fim, recomendo que faça uma doação. Infelizmente, pessoas que fazem cursos gratuítos nem sempre finalizam. Doando você me motivará a disponibilizar mais livros e/ou cursos sobre OSINT de graça.\nO valor da doação quem determina é você!\nAs doações podem ser feitas via cartão de crédito ou PayPal: https://boosty.to/cyb_detective.\nSe por alguma razão você não quiser/puder doar, ficarei muito feliz se estudares todo o livro."
   }
 ]
