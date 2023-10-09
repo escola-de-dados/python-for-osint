@@ -33,4 +33,10 @@ Rode o script `variable.py`da pasta `Day_2`:
 
 ![](img/ppo_7.png){fig-align="center"}
 
-Note que rodamos o script Python diferente do primeiro cap&#237;tulo. 
+Note que rodamos o script Python diferente do primeiro cap&#237;tulo. Da outra vez especificamos o caminho certo do arquivo. Desta vez abrimos primeiro a pasta `Day_2` e ent&#227;o rodamos o arquivo `variable.py`. Os dois jeitos s&#227;o aceit&#224;veis, utilize o que achar melhor.
+
+Como resultado deve aparecer algo similar a imagem acima.
+
+De agora em diante, vou explicar o script utilizando jogo da velha `#`. Voc&#234; pode inclu&#237;-los no seu c&#243;digo. Todo texto que vem ap&#243;s o jogo da velha &#233; ignorado pelo interpretador.
+
+>Neste livro, eu recomendo que primeiro voc&#234; entenda o que o script est&#225; fazendo e s&#243; depois leia a explica&#231;&#227;o.
