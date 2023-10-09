@@ -1,0 +1,63 @@
+# Dia 1 - Rode seu primeiro script
+
+Vamos come&#231;ar copiando o reposit&#243;rio do GitHub para o seu computador, com os arquivos de exemplos utilizados neste livro.
+
+Digite na linha de comando:
+
+`git clone https://github.com/cipher387/python-for-OSINT-21-days`
+
+`cd python-for-OSINT-21-days`
+
+Se aparecer uma mensagem pedindo seu nome de usu&#225;rio e senha, coloque as credenciais de acesso a sua conta no GitHub.
+
+> Um reposit&#243;rio GitHub &#233; basicamente um armazenador de arquivos de dados, c&#243;digos e documenta&#231;&#227;o. O que difere de servi&#231;os semelhantes de armazenamento s&#227;o suas funcionalidades: hist&#243;rico de vers&#245;es, capacidade de criar issues (notas com indica&#231;&#227;o de erros ou perguntas), forks (uma c&#243;pia ramificada de reposit&#243;rio, sem influenciar no projeto original), entre outras.  
+
+Digite na linha de comando:
+
+`python Day_1/start.py`
+
+O resultado deve ser algo parecido com a imagem abaixo.
+
+
+![](img/ppo_4.png){fig-align="center"}
+
+Tente mudar o texto entre aspas e rode o script novamente.
+
+Se voc&#234; n&#227;o estiver utilizando uma ambiente de desenvolvimento online, deve est&#225; se perguntando "Qual o melhor ambiente de desenvolvimento para editar arquivos Python?"
+
+Voc&#234; pode utilizar o editor de texto que mais gostar. Minha recomenda&#231;&#227;o &#233; usar os mais populares: [Visual Studio](https://visualstudio.microsoft.com/pt-br/), [Sublime Text](https://www.sublimetext.com/), etc. Estes conseguem destacar automaticamente a sintaxe e sugerir nomes de vari&#225;veis e/ou fun&#231;&#245;es (os c&#243;digos podem ser autocompletados). 
+
+Isto &#233; tudo por hoje!
+
+Este cap&#237;tulo &#233; mais curto que os outros para que as pessoas que n&#227;o instalaram o Python ou que tiveram problemas na execu&#231;&#227;o de qualquer script, consigam resolver.
+
+**O que voc&#234; deve fazer se encontrar algum erro?**
+
+Tenha certeza que instalou o Python corretamente:
+
+`python -version`
+
+Tenha certeza que instalou o Git:
+
+`git -version` 
+
+Se o reposit&#243;rio [python-for-OSINT-21-days](https://github.com/cipher387/python-for-OSINT-21-days) n&#227;o foi copiado, certifique-se de entrar com as credenciais corretas do GitHub.
+
+Caso aconte&#231;a algum erro ao rodar o script, tente deletar os arquivos e clon&#225;-los novamente. Se nenhuma das alternativas anteriores resolver o seu problema, sugiro utilizar um ambiente de desenvolvimento online.
+
+Este livro utiliza o [Gitpod](https://gitpod.io/). Se voc&#234; tamb&#233;m quiser utilizar, basta clicar neste link:
+
+<https://gitpod.io#https://github.com/cipher387/python-for-OSINT-21-days>
+
+![](img/ppo_5.png){fig-align="center"}
+
+Crie um novo workspace semelhante as configura&#231;&#245;es da imagem acima. Se necess&#225;rio fa&#231;a login com sua conta GitHub.
+
+
+![](img/ppo_6.png){fig-align="center"}
+
+Quando tudo estiver pronto, digite na linha de comando:
+
+`python Day_1/start.py`
+
+**Por favor, n&#227;o avance para o pr&#243;ximo cap&#237;tulo at&#233; que tenha conclu&#237;do com sucesso este cap&#237;tulo, e ao rodar o script apare&#231;a a mensagem "Welcome to 21 dias Python course!".**

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Python para OSINT em 21 dias - 5&nbsp; Como usar este livro</title>
+<title>Python para OSINT em 21 dias - 7&nbsp; Dia 1 - Rode seu primeiro script</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./pag5.html" rel="next">
-<link href="./pag3.html" rel="prev">
+<link href="./pag5.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -74,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pag4.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Como usar este livro</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pag6.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dia 1 - Rode seu primeiro script</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -137,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pag4.html" class="sidebar-item-text sidebar-link active">
+  <a href="./pag4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Como usar este livro</span></span></a>
   </div>
 </li>
@@ -149,8 +148,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pag6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Rode seu primeiro script</span></span></a>
+  <a href="./pag6.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dia 1 - Rode seu primeiro script</span></span></a>
   </div>
 </li>
     </ul>
@@ -166,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Como usar este livro</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dia 1 - Rode seu primeiro script</span></h1>
 </div>
 
 
@@ -181,19 +180,50 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>A primeira coisa que aconselho fazer é folhear as páginas, dar uma olhada geral no conteúdo e decidir se este livro será útil para você.</p>
-<p>Tomada esta decisão, estude o assunto de acordo com a sugestão de dia, durante 21 dias, pensando sempre em como você pode aplicar os aprendizados em suas investigações. Se acontecer de perder um dia, ou até uma semana, por favor não seja duro consigo mesmo e continue de onde parou.</p>
-<p>Também sugiro que você execute todos os exemplos de códigos, que estão disponíveis neste repositório: <a href="https://github.com/cipher387/python-for-OSINT-21-days">https://github.com/cipher387/python-for-OSINT-21-days</a>.</p>
-<p>Este livro é totalmente gratuíto. No início pensei em vender, mas como os assinantes da minha newsletter estão espalhados por todo o mundo e possuem diferentes níveis de renda, eu decidi disponibilizar sem restrições.</p>
+<p>Vamos começar copiando o repositório do GitHub para o seu computador, com os arquivos de exemplos utilizados neste livro.</p>
+<p>Digite na linha de comando:</p>
+<p><code>git clone https://github.com/cipher387/python-for-OSINT-21-days</code></p>
+<p><code>cd python-for-OSINT-21-days</code></p>
+<p>Se aparecer uma mensagem pedindo seu nome de usuário e senha, coloque as credenciais de acesso a sua conta no GitHub.</p>
+<blockquote class="blockquote">
+<p>Um repositório GitHub é basicamente um armazenador de arquivos de dados, códigos e documentação. O que difere de serviços semelhantes de armazenamento são suas funcionalidades: histórico de versões, capacidade de criar issues (notas com indicação de erros ou perguntas), forks (uma cópia ramificada de repositório, sem influenciar no projeto original), entre outras.</p>
+</blockquote>
+<p>Digite na linha de comando:</p>
+<p><code>python Day_1/start.py</code></p>
+<p>O resultado deve ser algo parecido com a imagem abaixo.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/cover.png" class="img-fluid figure-img"></p>
+<p><img src="img/ppo_4.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>Mas para incentivar sua disciplina e te motivar a chegar até o fim, recomendo que faça uma doação. Infelizmente, pessoas que fazem cursos gratuítos nem sempre finalizam. Doando você me motivará a disponibilizar mais livros e/ou cursos sobre OSINT de graça.</p>
-<p>O valor da doação quem determina é você!</p>
-<p>As doações podem ser feitas via cartão de crédito ou PayPal: <a href="https://boosty.to/cyb_detective">https://boosty.to/cyb_detective</a>.</p>
-<p>Se por alguma razão você não quiser/puder doar, ficarei muito feliz se estudares todo o livro.</p>
+<p>Tente mudar o texto entre aspas e rode o script novamente.</p>
+<p>Se você não estiver utilizando uma ambiente de desenvolvimento online, deve está se perguntando “Qual o melhor ambiente de desenvolvimento para editar arquivos Python?”</p>
+<p>Você pode utilizar o editor de texto que mais gostar. Minha recomendação é usar os mais populares: <a href="https://visualstudio.microsoft.com/pt-br/">Visual Studio</a>, <a href="https://www.sublimetext.com/">Sublime Text</a>, etc. Estes conseguem destacar automaticamente a sintaxe e sugerir nomes de variáveis e/ou funções (os códigos podem ser autocompletados).</p>
+<p>Isto é tudo por hoje!</p>
+<p>Este capítulo é mais curto que os outros para que as pessoas que não instalaram o Python ou que tiveram problemas na execução de qualquer script, consigam resolver.</p>
+<p><strong>O que você deve fazer se encontrar algum erro?</strong></p>
+<p>Tenha certeza que instalou o Python corretamente:</p>
+<p><code>python -version</code></p>
+<p>Tenha certeza que instalou o Git:</p>
+<p><code>git -version</code></p>
+<p>Se o repositório <a href="https://github.com/cipher387/python-for-OSINT-21-days">python-for-OSINT-21-days</a> não foi copiado, certifique-se de entrar com as credenciais corretas do GitHub.</p>
+<p>Caso aconteça algum erro ao rodar o script, tente deletar os arquivos e cloná-los novamente. Se nenhuma das alternativas anteriores resolver o seu problema, sugiro utilizar um ambiente de desenvolvimento online.</p>
+<p>Este livro utiliza o <a href="https://gitpod.io/">Gitpod</a>. Se você também quiser utilizar, basta clicar neste link:</p>
+<p><a href="https://gitpod.io#https://github.com/cipher387/python-for-OSINT-21-days" class="uri">https://gitpod.io#https://github.com/cipher387/python-for-OSINT-21-days</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/ppo_5.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Crie um novo workspace semelhante as configurações da imagem acima. Se necessário faça login com sua conta GitHub.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/ppo_6.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Quando tudo estiver pronto, digite na linha de comando:</p>
+<p><code>python Day_1/start.py</code></p>
+<p><strong>Por favor, não avance para o próximo capítulo até que tenha concluído com sucesso este capítulo, e ao rodar o script apareça a mensagem “Welcome to 21 dias Python course!”.</strong></p>
 
 
 
@@ -433,14 +463,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./pag3.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Para quem não é este livro</span></span>
+      <a href="./pag5.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Preparando o ambiente de trabalho</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./pag5.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Preparando o ambiente de trabalho</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

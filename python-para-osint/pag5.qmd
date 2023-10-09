@@ -1,0 +1,62 @@
+# Preparando o ambiente de trabalho
+
+Para ter um bom uso deste livro, voc&#234; precisa de acesso a internet, um computador ou smartphone com Python e Git instalado, uma vers&#227;o atualizada de qualquer navegador para rodar o [Gitpod](https://www.gitpod.io/) (um aplicativo web que disponibiliza um ambiente de desenvolvimento no navegador) ou uma conta em sites que fornecem servi&#231;os similares: [Repl.it](https://replit.com/), [CodePen](https://codepen.io/), [CodeAnywhere](https://codeanywhere.com/signin), etc.
+
+Tamb&#233;m recomendo organizar um cronograma de 21 dias, para marcar &#224; medida que for avan&#231;ando nos conte&#250;dos. 
+
+## Como instalar o Python
+
+N&#227;o entrarei em detalhes de como fazer a instala&#231;&#227;o, por haver diferentes tipos de Sistema Operacional. Mas, deixarei aqui links que auxiliar&#227;o em cada um deles.
+
+**Links de instala&#231;&#227;o**
+
+- Windows: <https://www.python.org/downloads/windows/>
+- MacOS: <https://www.python.org/downloads/macos/>
+- Linux: <https://www.python.org/downloads/source/>
+
+**Instru&#231;&#245;es de instala&#231;&#227;o para diferentes Sistemas Operacionais**
+
+<https://wiki.python.org/moin/BeginnersGuide/Download>
+
+**Aplicativos para rodar scripts Python no smartphone**
+
+- Termux para Android: <https://play.google.com/store/apps/details?id=com.termux&hl=en&pli=1> (Utilize as instru&#231;&#245;es Linux para instalar)
+- Pythonista para iOS: <https://apps.apple.com/us/app/pythonista-3/id1085978097?ls=1>
+
+
+## Como instalar o Git
+
+Git &#233; um sistema de controle de vers&#227;o. Ajuda voc&#234; a examinar os problemas em seu c&#243;digo, permitindo voltar para quando "estava funcionando", al&#233;m de permitir organizar o trabalho colaborativo em grandes times (facilitando a identifica&#231;&#227;o de quem quebrou ou ajustou algo).
+
+Voc&#234; usar&#225; Git na maior parte deste livro para copiar os exemplos de c&#243;digo que est&#227;o no GitHub e para instalar v&#225;rias ferramentas OSINT. 
+
+Instru&#231;&#245;es de instala&#231;&#227;o para Windows, Linux e MacOS: <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>
+
+## &#201; obrigat&#243;rio estudar este livro em exatos 21 dias?
+
+N&#227;o, mas tamb&#233;m n&#227;o recomendo fazer t&#227;o r&#225;pido, exceto se voc&#234; esteja de f&#233;rias e/ou tem muito tempo livre. Neste caso, tudo bem fazer 2-3 cap&#237;tulos por dia (n&#227;o mais que isto).
+
+Se voc&#234; trabalha 8 horas ou mais por dia, voc&#234; pode fazer um cap&#237;tulo a cada dois ou tr&#234;s dias. Outra op&#231;&#227;o &#233; fazer uma pausa de alguns dias nos estudos para permitir que voc&#234; consiga assimilar bem o que est&#225; aprendendo. No entanto, n&#227;o recomendo que voc&#234; fa&#231;a por mais de dois ou tr&#234;s meses. 
+
+**Recomendo que os cap&#237;tulos sejam estudados na sequ&#234;ncia proposta no livro.** 
+
+Mas tudo bem voc&#234; seguir suas pr&#243;prias regras. Estudar em ordem aleat&#243;ria poder&#225; acontecer &#233; erros de pacotes, como mostra a imagem abaixo. 
+
+![](img/ppo_2.png){fig-align="center"}
+
+No caso da imagem, para corrigir este problema, precisaria apenas instalar o pacote correto, usando `pip`.
+
+Por exemplo:
+
+`pip install numpy`
+
+![](img/ppo_3.png){fig-align="center"}
+
+Com tudo pronto, agora vamos l&#225;!
+
+
+
+
+
+
+

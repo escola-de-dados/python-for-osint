@@ -47,5 +47,47 @@
     "title": "5  Como usar este livro",
     "section": "",
     "text": "A primeira coisa que aconselho fazer é folhear as páginas, dar uma olhada geral no conteúdo e decidir se este livro será útil para você.\nTomada esta decisão, estude o assunto de acordo com a sugestão de dia, durante 21 dias, pensando sempre em como você pode aplicar os aprendizados em suas investigações. Se acontecer de perder um dia, ou até uma semana, por favor não seja duro consigo mesmo e continue de onde parou.\nTambém sugiro que você execute todos os exemplos de códigos, que estão disponíveis neste repositório: https://github.com/cipher387/python-for-OSINT-21-days.\nEste livro é totalmente gratuíto. No início pensei em vender, mas como os assinantes da minha newsletter estão espalhados por todo o mundo e possuem diferentes níveis de renda, eu decidi disponibilizar sem restrições.\n\n\n\n\n\nMas para incentivar sua disciplina e te motivar a chegar até o fim, recomendo que faça uma doação. Infelizmente, pessoas que fazem cursos gratuítos nem sempre finalizam. Doando você me motivará a disponibilizar mais livros e/ou cursos sobre OSINT de graça.\nO valor da doação quem determina é você!\nAs doações podem ser feitas via cartão de crédito ou PayPal: https://boosty.to/cyb_detective.\nSe por alguma razão você não quiser/puder doar, ficarei muito feliz se estudares todo o livro."
+  },
+  {
+    "objectID": "pag5.html#como-instalar-o-python",
+    "href": "pag5.html#como-instalar-o-python",
+    "title": "6  Preparando o ambiente de trabalho",
+    "section": "6.1 Como instalar o Python",
+    "text": "6.1 Como instalar o Python\nNão entrarei em detalhes de como fazer a instalação, por haver diferentes tipos de Sistema Operacional. Mas, deixarei aqui links que auxiliarão em cada um deles.\nLinks de instalação\n\nWindows: https://www.python.org/downloads/windows/\nMacOS: https://www.python.org/downloads/macos/\nLinux: https://www.python.org/downloads/source/\n\nInstruções de instalação para diferentes Sistemas Operacionais\nhttps://wiki.python.org/moin/BeginnersGuide/Download\nAplicativos para rodar scripts Python no smartphone\n\nTermux para Android: https://play.google.com/store/apps/details?id=com.termux&hl=en&pli=1 (Utilize as instruções Linux para instalar)\nPythonista para iOS: https://apps.apple.com/us/app/pythonista-3/id1085978097?ls=1"
+  },
+  {
+    "objectID": "pag5.html#como-instalar-o-git",
+    "href": "pag5.html#como-instalar-o-git",
+    "title": "6  Preparando o ambiente de trabalho",
+    "section": "6.2 Como instalar o Git",
+    "text": "6.2 Como instalar o Git\nGit é um sistema de controle de versão. Ajuda você a examinar os problemas em seu código, permitindo voltar para quando “estava funcionando”, além de permitir organizar o trabalho colaborativo em grandes times (facilitando a identificação de quem quebrou ou ajustou algo).\nVocê usará Git na maior parte deste livro para copiar os exemplos de código que estão no GitHub e para instalar várias ferramentas OSINT.\nInstruções de instalação para Windows, Linux e MacOS: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git"
+  },
+  {
+    "objectID": "pag5.html#obrigatrio-fazer-este-curso-em-exatos-21-dias",
+    "href": "pag5.html#obrigatrio-fazer-este-curso-em-exatos-21-dias",
+    "title": "6  Preparando o ambiente de trabalho",
+    "section": "6.3 � obrigat�rio fazer este curso em exatos 21 dias?",
+    "text": "6.3 � obrigat�rio fazer este curso em exatos 21 dias?\nNão, mas também não recomendo fazer tão rápido, exceto se você esteja de férias e/ou tem muito tempo livre. Neste caso, tudo bem fazer 2-3 capítulos por dia (não mais que isto)."
+  },
+  {
+    "objectID": "pag5.html#é-obrigatório-fazer-este-curso-em-exatos-21-dias",
+    "href": "pag5.html#é-obrigatório-fazer-este-curso-em-exatos-21-dias",
+    "title": "6  Preparando o ambiente de trabalho",
+    "section": "6.3 É obrigatório fazer este curso em exatos 21 dias?",
+    "text": "6.3 É obrigatório fazer este curso em exatos 21 dias?\nNão, mas também não recomendo fazer tão rápido, exceto se você esteja de férias e/ou tem muito tempo livre. Neste caso, tudo bem fazer 2-3 capítulos por dia (não mais que isto).\nSe você trabalha 8 horas ou mais por dia, você pode fazer um capítulo a cada dois ou três dias. Outra opção é fazer uma pausa de alguns dias nos estudos para permitir que você consiga assimilar bem o que está aprendendo. No entanto, não recomendo que você faça por mais de dois ou três meses.\nRecomendo que os capítulos sejam estudados na sequência proposta no livro."
+  },
+  {
+    "objectID": "pag5.html#é-obrigatório-estudar-este-livro-em-exatos-21-dias",
+    "href": "pag5.html#é-obrigatório-estudar-este-livro-em-exatos-21-dias",
+    "title": "6  Preparando o ambiente de trabalho",
+    "section": "6.3 É obrigatório estudar este livro em exatos 21 dias?",
+    "text": "6.3 É obrigatório estudar este livro em exatos 21 dias?\nNão, mas também não recomendo fazer tão rápido, exceto se você esteja de férias e/ou tem muito tempo livre. Neste caso, tudo bem fazer 2-3 capítulos por dia (não mais que isto).\nSe você trabalha 8 horas ou mais por dia, você pode fazer um capítulo a cada dois ou três dias. Outra opção é fazer uma pausa de alguns dias nos estudos para permitir que você consiga assimilar bem o que está aprendendo. No entanto, não recomendo que você faça por mais de dois ou três meses.\nRecomendo que os capítulos sejam estudados na sequência proposta no livro.\nMas tudo bem você seguir suas próprias regras. Estudar em ordem aleatória poderá acontecer é erros de pacotes, como mostra a imagem abaixo.\n\n\n\n\n\nNo caso da imagem, para corrigir este problema, precisaria apenas instalar o pacote correto, usando pip.\nPor exemplo:\npip install numpy\n\n\n\n\n\nCom tudo pronto, agora vamos lá!"
+  },
+  {
+    "objectID": "pag6.html",
+    "href": "pag6.html",
+    "title": "7  Dia 1 - Rode seu primeiro script",
+    "section": "",
+    "text": "Vamos começar copiando o repositório do GitHub para o seu computador, com os arquivos de exemplos utilizados neste livro.\nDigite na linha de comando:\ngit clone https://github.com/cipher387/python-for-OSINT-21-days\ncd python-for-OSINT-21-days\nSe aparecer uma mensagem pedindo seu nome de usuário e senha, coloque as credenciais de acesso a sua conta no GitHub.\n\nUm repositório GitHub é basicamente um armazenador de arquivos de dados, códigos e documentação. O que difere de serviços semelhantes de armazenamento são suas funcionalidades: histórico de versões, capacidade de criar issues (notas com indicação de erros ou perguntas), forks (uma cópia ramificada de repositório, sem influenciar no projeto original), entre outras.\n\nDigite na linha de comando:\npython Day_1/start.py\nO resultado deve ser algo parecido com a imagem abaixo.\n\n\n\n\n\nTente mudar o texto entre aspas e rode o script novamente.\nSe você não estiver utilizando uma ambiente de desenvolvimento online, deve está se perguntando “Qual o melhor ambiente de desenvolvimento para editar arquivos Python?”\nVocê pode utilizar o editor de texto que mais gostar. Minha recomendação é usar os mais populares: Visual Studio, Sublime Text, etc. Estes conseguem destacar automaticamente a sintaxe e sugerir nomes de variáveis e/ou funções (os códigos podem ser autocompletados).\nIsto é tudo por hoje!\nEste capítulo é mais curto que os outros para que as pessoas que não instalaram o Python ou que tiveram problemas na execução de qualquer script, consigam resolver.\nO que você deve fazer se encontrar algum erro?\nTenha certeza que instalou o Python corretamente:\npython -version\nTenha certeza que instalou o Git:\ngit -version\nSe o repositório python-for-OSINT-21-days não foi copiado, certifique-se de entrar com as credenciais corretas do GitHub.\nCaso aconteça algum erro ao rodar o script, tente deletar os arquivos e cloná-los novamente. Se nenhuma das alternativas anteriores resolver o seu problema, sugiro utilizar um ambiente de desenvolvimento online.\nEste livro utiliza o Gitpod. Se você também quiser utilizar, basta clicar neste link:\nhttps://gitpod.io#https://github.com/cipher387/python-for-OSINT-21-days\n\n\n\n\n\nCrie um novo workspace semelhante as configurações da imagem acima. Se necessário faça login com sua conta GitHub.\n\n\n\n\n\nQuando tudo estiver pronto, digite na linha de comando:\npython Day_1/start.py\nPor favor, não avance para o próximo capítulo até que tenha concluído com sucesso este capítulo, e ao rodar o script apareça a mensagem “Welcome to 21 dias Python course!”."
   }
 ]

@@ -1,4 +1,4 @@
-# **Para quem &#233; este livro**
+# Para quem &#233; este livro
 
 Primeiramente este livro foi feito para meus [seguidores no X](https://twitter.com/cyb_detective) (antigo Twitter), rede a qual eu posto conte&#250;do sobre OSINT (Open Source Intelligent). Tamb&#233;m &#233; direcionado a profissionais da &#225;rea, pesquisadores e interessados em investiga&#231;&#245;es em dados abertos.
 
