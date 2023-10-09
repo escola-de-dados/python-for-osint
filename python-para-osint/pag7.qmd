@@ -1,0 +1,36 @@
+# Dia 2 - O m&#237;nimo da sintaxe b&#225;sica do Python
+
+Hoje vamos ver os quatro conceitos b&#225;sicos da linguagem Python, que tamb&#233;m pode ser encontrado nas linguagens de programa&#231;&#227;o mais populares. Falarei delas a seguir da maneira mais simples poss&#237;vel.
+
+Se voc&#234; j&#225; tiver estudado Python antes, poder&#225; achar que eu perdi muita coisa importante na explica&#231;&#227;o. Por&#233;m quero relembrar que este livro n&#227;o pretende tornar voc&#234; um bom desenvolvedor Python, mas mostrar solu&#231;&#245;es simples e poss&#237;veis para automatizar rotinas de OSINT.
+
+## Vari&#225;veis
+
+De acordo com a defini&#231;&#227;o cl&#225;ssica &#233; "uma &#225;rea nomeada na mem&#243;ria que &#233; usada para acessar determinados dados".
+
+Vari&#225;veis no Python podem armazenar:
+
+-   Valores em texto - desde uma letra &#233; um cap&#237;tulo de livro. Este tipo de dado &#233; declarado usando `str()`.
+-   N&#250;meros inteiros - s&#227;o declarados usando a fun&#231;&#227;o `int()`;
+-   N&#250;meros float - s&#227;o declarados usando a fun&#231;&#227;o `int()`;
+-   True / False - s&#227;o declarados usando a fun&#231;&#227;o `bool()`.
+
+Existem outros tipos de dados, mas n&#227;o veremos neste livro.
+
+Em algumas linguagens &#233; necess&#225;rio declarar o tipo de vari&#225;vel. Em Python n&#227;o precisa fazer isso desnecessariamente (faremos algumas vezes neste livro). Por exemplo, quando quiser acrescentar um n&#250;mero a uma string/text ou combinar de alguma forma vari&#225;veis que s&#227;o definidas por padr&#227;o como dados de tipos diferentes.
+
+Voc&#234; pode usar letras mai&#250;sculas, min&#250;sculas e o car&#225;cter underscore `_` nos nomes das vari&#225;veis. Pode tamb&#233;m utilizar n&#250;meros, desde que n&#227;o inicie com eles.
+
+Tente nomea-las com nomes que fa&#231;am sentido, ser&#225; mais f&#225;cil entender seu c&#243;digo no futuro.
+
+Vamos praticar um pouco!
+
+Rode o script `variable.py`da pasta `Day_2`:
+
+`cd Day_2`
+
+`python variable.py`
+
+![](img/ppo_7.png){fig-align="center"}
+
+Note que rodamos o script Python diferente do primeiro cap&#237;tulo. 

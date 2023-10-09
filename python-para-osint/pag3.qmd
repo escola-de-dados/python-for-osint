@@ -5,6 +5,3 @@ Para quem n&#227;o conhe&#231;e OSINT ou prentende iniciar a partir daqui. A mai
 Para aqueles que querem aprender Python, sugiro procurar cursos e/ou tutoriais (existem alguns na [Escola de Dados](https://escoladedados.org/)) e depois voltar aqui.
 
 Este livro n&#227;o aborda muitas coisas importantes e algumas coisas talvez sejam at&#233; consideradas uma m&#225; pr&#225;tica. Existem coisas que n&#227;o importam se escritas no contexto de automa&#231;&#227;o de tarefas em OSINT, mas que podem ser extremamente importantes em grandes projetos.
-
-
-

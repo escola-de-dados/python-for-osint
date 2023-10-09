@@ -53,10 +53,3 @@ Por exemplo:
 ![](img/ppo_3.png){fig-align="center"}
 
 Com tudo pronto, agora vamos l&#225;!
-
-
-
-
-
-
-

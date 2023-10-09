@@ -15,6 +15,7 @@ book:
     - pag4.qmd
     - pag5.qmd
     - pag6.qmd
+    - pag7.qmd
 
 bibliography: references.bib
 
