@@ -147,7 +147,8 @@ Este tipo de estrutura permite que voc&#234; repita um c&#243;digo algumas vezes
 Rode `loop.py`:
 
 ![](img/ppo_10.png){fig-align="center"}
-\#\ Criei uma lista com nome de garotas.
+
+\#\ Criei uma lista de nomes.
 
 ```python
 girls = ["Anna", "Maria", "Eva"]
