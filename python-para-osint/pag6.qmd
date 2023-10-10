@@ -4,9 +4,12 @@ Vamos come&#231;ar copiando o reposit&#243;rio do GitHub para o seu computador, 
 
 Digite na linha de comando:
 
-`git clone https://github.com/cipher387/python-for-OSINT-21-days`
-
-`cd python-for-OSINT-21-days`
+```python
+git clone https://github.com/cipher387/python-for-OSINT-21-days
+```
+```python
+cd python-for-OSINT-21-days
+```
 
 Se aparecer uma mensagem pedindo seu nome de usu&#225;rio e senha, coloque as credenciais de acesso a sua conta no GitHub.
 
@@ -14,7 +17,9 @@ Se aparecer uma mensagem pedindo seu nome de usu&#225;rio e senha, coloque as cr
 
 Digite na linha de comando:
 
-`python Day_1/start.py`
+```python
+python Day_1/start.py
+```
 
 O resultado deve ser algo parecido com a imagem abaixo.
 
@@ -35,11 +40,15 @@ Este cap&#237;tulo &#233; mais curto que os outros para que as pessoas que n&#22
 
 Tenha certeza que instalou o Python corretamente:
 
-`python -version`
+```python
+python --version
+```
 
 Tenha certeza que instalou o Git:
 
-`git -version` 
+```python
+git --version
+```
 
 Se o reposit&#243;rio [python-for-OSINT-21-days](https://github.com/cipher387/python-for-OSINT-21-days) n&#227;o foi copiado, certifique-se de entrar com as credenciais corretas do GitHub.
 
@@ -58,6 +67,8 @@ Crie um novo workspace semelhante as configura&#231;&#245;es da imagem acima. Se
 
 Quando tudo estiver pronto, digite na linha de comando:
 
-`python Day_1/start.py`
+```python
+python Day_1/start.py
+```
 
 **Por favor, n&#227;o avance para o pr&#243;ximo cap&#237;tulo at&#233; que tenha conclu&#237;do com sucesso este cap&#237;tulo, e ao rodar o script apare&#231;a a mensagem "Welcome to 21 dias Python course!".**

@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -189,14 +223,14 @@ ul.task-list li input[type="checkbox"] {
 
 <p>Vamos começar copiando o repositório do GitHub para o seu computador, com os arquivos de exemplos utilizados neste livro.</p>
 <p>Digite na linha de comando:</p>
-<p><code>git clone https://github.com/cipher387/python-for-OSINT-21-days</code></p>
-<p><code>cd python-for-OSINT-21-days</code></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>git clone https:<span class="op">//</span>github.com<span class="op">/</span>cipher387<span class="op">/</span>python<span class="op">-</span><span class="cf">for</span><span class="op">-</span>OSINT<span class="op">-</span><span class="dv">21</span><span class="op">-</span>days</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>cd python<span class="op">-</span><span class="cf">for</span><span class="op">-</span>OSINT<span class="op">-</span><span class="dv">21</span><span class="op">-</span>days</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Se aparecer uma mensagem pedindo seu nome de usuário e senha, coloque as credenciais de acesso a sua conta no GitHub.</p>
 <blockquote class="blockquote">
 <p>Um repositório GitHub é basicamente um armazenador de arquivos de dados, códigos e documentação. O que difere de serviços semelhantes de armazenamento são suas funcionalidades: histórico de versões, capacidade de criar issues (notas com indicação de erros ou perguntas), forks (uma cópia ramificada de repositório, sem influenciar no projeto original), entre outras.</p>
 </blockquote>
 <p>Digite na linha de comando:</p>
-<p><code>python Day_1/start.py</code></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>python Day_1<span class="op">/</span>start.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>O resultado deve ser algo parecido com a imagem abaixo.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -210,9 +244,9 @@ ul.task-list li input[type="checkbox"] {
 <p>Este capítulo é mais curto que os outros para que as pessoas que não instalaram o Python ou que tiveram problemas na execução de qualquer script, consigam resolver.</p>
 <p><strong>O que você deve fazer se encontrar algum erro?</strong></p>
 <p>Tenha certeza que instalou o Python corretamente:</p>
-<p><code>python -version</code></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>python <span class="op">--</span>version</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Tenha certeza que instalou o Git:</p>
-<p><code>git -version</code></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>git <span class="op">--</span>version</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Se o repositório <a href="https://github.com/cipher387/python-for-OSINT-21-days">python-for-OSINT-21-days</a> não foi copiado, certifique-se de entrar com as credenciais corretas do GitHub.</p>
 <p>Caso aconteça algum erro ao rodar o script, tente deletar os arquivos e cloná-los novamente. Se nenhuma das alternativas anteriores resolver o seu problema, sugiro utilizar um ambiente de desenvolvimento online.</p>
 <p>Este livro utiliza o <a href="https://gitpod.io/">Gitpod</a>. Se você também quiser utilizar, basta clicar neste link:</p>
@@ -229,7 +263,7 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>Quando tudo estiver pronto, digite na linha de comando:</p>
-<p><code>python Day_1/start.py</code></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>python Day_1<span class="op">/</span>start.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Por favor, não avance para o próximo capítulo até que tenha concluído com sucesso este capítulo, e ao rodar o script apareça a mensagem “Welcome to 21 dias Python course!”.</strong></p>
 
 

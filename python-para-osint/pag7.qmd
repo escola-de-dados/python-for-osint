@@ -27,9 +27,10 @@ Vamos praticar um pouco!
 
 Rode o script `variable.py`da pasta `Day_2`:
 
-`cd Day_2`
-
-`python variable.py`
+```python
+cd Day_2
+python variable.py
+```
 
 ![](img/ppo_7.png){fig-align="center"}
 
@@ -39,4 +40,139 @@ Como resultado deve aparecer algo similar a imagem acima.
 
 De agora em diante, vou explicar o script utilizando jogo da velha `#`. Voc&#234; pode inclu&#237;-los no seu c&#243;digo. Todo texto que vem ap&#243;s o jogo da velha &#233; ignorado pelo interpretador.
 
->Neste livro, eu recomendo que primeiro voc&#234; entenda o que o script est&#225; fazendo e s&#243; depois leia a explica&#231;&#227;o.
+>Recomendo que primeiro voc&#234; entenda o que o script est&#225; fazendo e s&#243; depois leia a explica&#231;&#227;o.
+
+\#\ Atribui o valor `John` a vari&#225;vel `first_name`
+
+```python
+first_name = "John"
+```
+
+\#\ O valor da vari&#225;vel `last_name` &#233; decidido pelo usu&#225;ria. O uso da fun&#231;&#227;o `input()` possibilita isso. O `\n` serve para quebrar uma linha, pode remover se quiser.
+
+```python
+last_name = input('What is your last name?\n')
+```
+
+\#\ A sa&#237;da s&#227;o valores que est&#227;o nas duas vari&#225;veis. Usamos a fun&#231;&#227;o `print()` para visualizar. O `+` serve para concatenar.
+
+```python
+print("You are" + " " + first_name + " " + last_name)
+```
+
+Note que estamos usando aspas simples e duplas para strings. Os dois jeitos s&#227;o aceit&#225;veis no Python.
+
+> A partir daqui vamos come&#231;ar a usar fun&#231;&#245;es. Uma fun&#231;&#227;o &#233; um objeto que pede um valor como entrada e retorna como resposta uma a&#231;&#227;o ou um valor. `input()` e `print()` s&#227;o fun&#231;&#245;es embutidas em Python que pedem strings como argumento.
+
+Em algum momento deste livro voc&#234; aprender&#225; a criar suas pr&#243;prias fun&#231;&#245;es.
+
+## Estrutura condicional 
+
+&#201; uma constru&#231;&#227;o sint&#225;tica que permite efetuar uma a&#231;&#227;o a partir de uma condi&#231;&#227;o estabelecida. Vamos ver um exemplo.
+
+Rode `condition.py`:
+
+![](img/ppo_8.png){fig-align="center"}
+
+\#\ Primeiro usamos a fun&#231;&#227;o `input()` para pedir a idade da usu&#225;ria.
+
+```python
+age = input('How old are you?\n')
+```
+
+\#\ Se ela entrar com um valor maior que 27, n&#243;s respondemos que ela est&#225; muito velha.
+
+```python
+if int(age) > 27:
+  print("You are so old")
+```
+
+\#\ Se for menor que 27, ela &#233; muito nova.
+
+```python
+elif int(age) < 27:
+  print("You are so young")
+```
+
+## Listas
+
+Uma lista &#233; um conjunto ordenado de itens, cada um com seu pr&#243;prio &#237;ndice, permitindo acesso r&#225;pido.
+
+Rode `list.py`: 
+
+![](img/ppo_9.png){fig-align="center"}
+
+\#\ Criei uma lista de nomes.
+
+```python
+girls = ["Anna", "Maria", "Eva"]
+```
+
+\#\ Mostrei os nomes usando a fun&#231;&#227;o `print()`
+
+```python
+print(girls)
+```
+
+\#\ Adicionei um item usando a fun&#231;&#227;o embutida `append()`(por padr&#227;o novos elementos s&#227;o adicionados ao final da lista).
+
+```python
+girls.append("Brenda")
+```
+
+\#\ Mostrei a lista atualizada
+
+```python
+print(girls)
+```
+
+\#\ Mostrei o item 3 da lista (as listas come&#231;am a contar a partir do 0).
+
+```python
+print (girls[3])
+```
+
+Neste livro usaremos bastante as listas e aprenderemos mais fun&#231;&#227;o embutidas para trabalhar com elas.
+
+Se voc&#234; j&#225; estudou outras linguagens de programa&#231;&#227;o, provavelmente o conceito de arrays lhe &#233; familiar. Python tamb&#233; tem este conceito. Os arrays em Python se difere das listas particularmente pelo fato de que em listas voc&#234; usa dados de diferentes tipos (por exemplo, o primeiro elemento de uma lista pode ser uma string e o segundo um n&#250;mero), enquanto os arrays s&#243; podem ter um tipo de elemento. 
+
+Existem outras diferen&#231;as que fazem a lista ser mais flex&#237;vel e conveniente. Para a maioria das tarefas relacionadas a OSINT, &#233; suficiente saber como usar listas, por isso n&#227;o estudaremos arrays neste livro. 
+
+Listas podem ser multidimensionais, quando cada item da lista &#233; tamb&#233;m outra lista de 2, 3 ou mais itens. Este tipo ser&#225; mencionado rapidamente neste livro.
+
+## Estrutura de repeti&#231;&#227;o
+
+Este tipo de estrutura permite que voc&#234; repita um c&#243;digo algumas vezes, passando pelos elementos de um array, um por um. 
+
+Rode `loop.py`:
+
+![](img/ppo_10.png){fig-align="center"}
+\#\ Criei uma lista com nome de garotas.
+
+```python
+girls = ["Anna", "Maria", "Eva"]
+```
+
+\#\ Mostrei um a um na tela, adicionando um ponto e v&#237;rgula.
+
+```python
+for girl in girls:
+  print (girl +"; ")
+```
+
+\#\ Mostrei na tela de 0 a 19 (lembrando que a contagem em Python come&#231;a com 0).
+
+```python
+for x in range(20):
+  print(x)
+```
+
+> Quando usar estruturas de condi&#231;&#227;o ou repeti&#231;&#227;o, sempre atente a identa&#231;&#227;o (espa&#231;os para organizar o c&#243;digo). Eles devem ser sempre quatro espa&#231;os antes do c&#243;digo "interno".
+
+Na minha opini&#227;o, este &#233; o m&#237;nimo de teoria que voc&#234; precisa para escrever scripts Python. No pr&#243;ximo cap&#237;tulo vamos aprender na pr&#225;tica os conhecimentos que ser&#227;o &#250;teis para OSINT.
+
+
+
+
+
+

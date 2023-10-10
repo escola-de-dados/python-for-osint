@@ -48,7 +48,9 @@ No caso da imagem, para corrigir este problema, precisaria apenas instalar o pac
 
 Por exemplo:
 
-`pip install numpy`
+```python
+pip install numpy
+```
 
 ![](img/ppo_3.png){fig-align="center"}
 
