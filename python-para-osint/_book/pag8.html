@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Python para OSINT em 21 dias - 8&nbsp; Dia 2 - O mínimo da sintaxe básica do Python</title>
+<title>Python para OSINT em 21 dias - 9&nbsp; Dia 3 - Instalando e rodando o Python usando linha de comando</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./pag8.html" rel="next">
-<link href="./pag6.html" rel="prev">
+<link href="./pag7.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -108,7 +107,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pag7.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Dia 2 - O mínimo da sintaxe básica do Python</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pag8.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Dia 3 - Instalando e rodando o Python usando linha de comando</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -189,13 +188,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pag7.html" class="sidebar-item-text sidebar-link active">
+  <a href="./pag7.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Dia 2 - O mínimo da sintaxe básica do Python</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pag8.html" class="sidebar-item-text sidebar-link">
+  <a href="./pag8.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Dia 3 - Instalando e rodando o Python usando linha de comando</span></span></a>
   </div>
 </li>
@@ -209,10 +208,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#variáveis" id="toc-variáveis" class="nav-link active" data-scroll-target="#variáveis"><span class="header-section-number">8.1</span> Variáveis</a></li>
-  <li><a href="#estrutura-condicional" id="toc-estrutura-condicional" class="nav-link" data-scroll-target="#estrutura-condicional"><span class="header-section-number">8.2</span> Estrutura condicional</a></li>
-  <li><a href="#listas" id="toc-listas" class="nav-link" data-scroll-target="#listas"><span class="header-section-number">8.3</span> Listas</a></li>
-  <li><a href="#estrutura-de-repetição" id="toc-estrutura-de-repetição" class="nav-link" data-scroll-target="#estrutura-de-repetição"><span class="header-section-number">8.4</span> Estrutura de repetição</a></li>
+  <li><a href="#º-opção" id="toc-º-opção" class="nav-link active" data-scroll-target="#º-opção"><span class="header-section-number">9.1</span> 1º opção</a></li>
+  <li><a href="#º-opção-1" id="toc-º-opção-1" class="nav-link" data-scroll-target="#º-opção-1"><span class="header-section-number">9.2</span> 2º opção</a></li>
+  <li><a href="#º-opção-2" id="toc-º-opção-2" class="nav-link" data-scroll-target="#º-opção-2"><span class="header-section-number">9.3</span> 3º opção</a></li>
   </ul>
 </nav>
     </div>
@@ -221,7 +219,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Dia 2 - O mínimo da sintaxe básica do Python</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Dia 3 - Instalando e rodando o Python usando linha de comando</span></h1>
 </div>
 
 
@@ -236,112 +234,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>Hoje vamos ver os quatro conceitos básicos da linguagem Python, que também pode ser encontrado nas linguagens de programação mais populares. Falarei delas a seguir da maneira mais simples possível.</p>
-<p>Se você já tiver estudado Python antes, poderá achar que eu perdi muita coisa importante na explicação. Porém quero relembrar que este livro não pretende tornar você um bom desenvolvedor Python, mas mostrar soluções simples e possíveis para automatizar rotinas de OSINT.</p>
-<section id="variáveis" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="variáveis"><span class="header-section-number">8.1</span> Variáveis</h2>
-<p>De acordo com a definição clássica é “uma área nomeada na memória que é usada para acessar determinados dados”.</p>
-<p>Variáveis no Python podem armazenar:</p>
-<ul>
-<li>Valores em texto - desde uma letra é um capítulo de livro. Este tipo de dado é declarado usando <code>str()</code>.</li>
-<li>Números inteiros - são declarados usando a função <code>int()</code>;</li>
-<li>Números float - são declarados usando a função <code>int()</code>;</li>
-<li>True / False - são declarados usando a função <code>bool()</code>.</li>
-</ul>
-<p>Existem outros tipos de dados, mas não veremos neste livro.</p>
-<p>Em algumas linguagens é necessário declarar o tipo de variável. Em Python não precisa fazer isso desnecessariamente (faremos algumas vezes neste livro). Por exemplo, quando quiser acrescentar um número a uma string/text ou combinar de alguma forma variáveis que são definidas por padrão como dados de tipos diferentes.</p>
-<p>Você pode usar letras maiúsculas, minúsculas e o carácter underscore <code>_</code> nos nomes das variáveis. Pode também utilizar números, desde que não inicie com eles.</p>
-<p>Tente nomea-las com nomes que façam sentido, será mais fácil entender seu código no futuro.</p>
-<p>Vamos praticar um pouco!</p>
-<p>Rode o script <code>variable.py</code>da pasta <code>Day_2</code>:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>cd Day_2</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>python variable.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Se você acompanha minha meus <a href="https://twitter.com/cyb_detective">tweets</a>, sabe que sempre posto ferramentas de OSINT usando linhas de comando. A maioria delas são construidas em Python, mas também tem em outras linguagens como JavaScript (Node.js), Go, Bash (Shell script) e Rust.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/ppo_7.png" class="img-fluid figure-img"></p>
+<p><img src="img/ppo_11.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>Note que rodamos o script Python diferente do primeiro capítulo. Da outra vez especificamos o caminho certo do arquivo. Desta vez abrimos primeiro a pasta <code>Day_2</code> e então rodamos o arquivo <code>variable.py</code>. Os dois jeitos são aceitàveis, utilize o que achar melhor.</p>
-<p>Como resultado deve aparecer algo similar a imagem acima.</p>
-<p>De agora em diante, vou explicar o script utilizando jogo da velha <code>#</code>. Você pode incluí-los no seu código. Todo texto que vem após o jogo da velha é ignorado pelo interpretador.</p>
+<p>Neste capítulo prenderemos como configurar e rodar Python deste jeito. Como exemplo, usaremos o <a href="https://github.com/rly0nheart/thorndyke">Thorndyke</a> e o <a href="https://github.com/p1ngul1n0/blackbird">Blackbird</a>, duas ferramentas de pesquisa de usuárias em redes sociais, através do nickname. Vou te mostrar 3 opções.</p>
+<section id="º-opção" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="º-opção"><span class="header-section-number">9.1</span> 1º opção</h2>
+<p>Instalando o gerenciador de pacotes <code>PyPI</code> (indexador de pacotes).</p>
 <blockquote class="blockquote">
-<p>Recomendo que primeiro você entenda o que o script está fazendo e só depois leia a explicação.</p>
+<p>O Python Package Index (PyPI) é um repositório de softwares Python, contendo mais de 300.000 mil pacotes. O usaremos em quase todos os capítudos deste livro.</p>
 </blockquote>
-<p>#&nbsp;Atribui o valor <code>John</code> a variável <code>first_name</code></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>first_name <span class="op">=</span> <span class="st">"John"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>#&nbsp;O valor da variável <code>last_name</code> é decidido pelo usuária. O uso da função <code>input()</code> possibilita isso. O <code>\n</code> serve para quebrar uma linha, pode remover se quiser.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>last_name <span class="op">=</span> <span class="bu">input</span>(<span class="st">'What is your last name?</span><span class="ch">\n</span><span class="st">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>#&nbsp;A saída são valores que estão nas duas variáveis. Usamos a função <code>print()</code> para visualizar. O <code>+</code> serve para concatenar.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"You are"</span> <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> first_name <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> last_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Note que estamos usando aspas simples e duplas para strings. Os dois jeitos são aceitáveis no Python.</p>
-<blockquote class="blockquote">
-<p>A partir daqui vamos começar a usar funções. Uma função é um objeto que pede um valor como entrada e retorna como resposta uma ação ou um valor. <code>input()</code> e <code>print()</code> são funções embutidas em Python que pedem strings como argumento.</p>
-</blockquote>
-<p>Em algum momento deste livro você aprenderá a criar suas próprias funções.</p>
-</section>
-<section id="estrutura-condicional" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="estrutura-condicional"><span class="header-section-number">8.2</span> Estrutura condicional</h2>
-<p>É uma construção sintática que permite efetuar uma ação a partir de uma condição estabelecida. Vamos ver um exemplo.</p>
-<p>Rode <code>condition.py</code>:</p>
+<p>Vamos começar com o Thorndyke (<a href="https://github.com/rly0nheart/thorndyke" class="uri">https://github.com/rly0nheart/thorndyke</a>), ferramenta muito simples para checar se o nickname de um usuário existem em várias redes sociais.</p>
+<p>Basta digitar na linha de comando:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pip install thorndyke</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/ppo_8.png" class="img-fluid figure-img"></p>
+<p><img src="img/ppo_12.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>#&nbsp;Primeiro usamos a função <code>input()</code> para pedir a idade da usuária.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="bu">input</span>(<span class="st">'How old are you?</span><span class="ch">\n</span><span class="st">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>#&nbsp;Se ela entrar com um valor maior que 27, nós respondemos que ela está muito velha.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">int</span>(age) <span class="op">&gt;</span> <span class="dv">27</span>:</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">"You are so old"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>#&nbsp;Se for menor que 27, ela é muito nova.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> <span class="bu">int</span>(age) <span class="op">&lt;</span> <span class="dv">27</span>:</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">"You are so young"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="listas" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="listas"><span class="header-section-number">8.3</span> Listas</h2>
-<p>Uma lista é um conjunto ordenado de itens, cada um com seu próprio índice, permitindo acesso rápido.</p>
-<p>Rode <code>list.py</code>:</p>
+<p>Perfeito! Agora a ferramenta pode ser utilizada.</p>
+<p>Digite na linha de comando <code>thorndyke</code> seguido do nickname que você deseja procurar:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>thorndyke escoladedados</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/ppo_9.png" class="img-fluid figure-img"></p>
+<p><img src="img/ppo_13.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>#&nbsp;Criei uma lista de nomes.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>girls <span class="op">=</span> [<span class="st">"Anna"</span>, <span class="st">"Maria"</span>, <span class="st">"Eva"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>#&nbsp;Mostrei os nomes usando a função <code>print()</code></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(girls)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>#&nbsp;Adicionei um item usando a função embutida <code>append()</code>(por padrão novos elementos são adicionados ao final da lista).</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>girls.append(<span class="st">"Brenda"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>#&nbsp;Mostrei a lista atualizada</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(girls)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>#&nbsp;Mostrei o item 3 da lista (as listas começam a contar a partir do 0).</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (girls[<span class="dv">3</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Neste livro usaremos bastante as listas e aprenderemos mais função embutidas para trabalhar com elas.</p>
-<p>Se você já estudou outras linguagens de programação, provavelmente o conceito de arrays lhe é familiar. Python també tem este conceito. Os arrays em Python se difere das listas particularmente pelo fato de que em listas você usa dados de diferentes tipos (por exemplo, o primeiro elemento de uma lista pode ser uma string e o segundo um número), enquanto os arrays só podem ter um tipo de elemento.</p>
-<p>Existem outras diferenças que fazem a lista ser mais flexível e conveniente. Para a maioria das tarefas relacionadas a OSINT, é suficiente saber como usar listas, por isso não estudaremos arrays neste livro.</p>
-<p>Listas podem ser multidimensionais, quando cada item da lista é também outra lista de 2, 3 ou mais itens. Este tipo será mencionado rapidamente neste livro.</p>
 </section>
-<section id="estrutura-de-repetição" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="estrutura-de-repetição"><span class="header-section-number">8.4</span> Estrutura de repetição</h2>
-<p>Este tipo de estrutura permite que você repita um código algumas vezes, passando pelos elementos de um array, um por um.</p>
-<p>Rode <code>loop.py</code>:</p>
+<section id="º-opção-1" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="º-opção-1"><span class="header-section-number">9.2</span> 2º opção</h2>
+<p>Infelizmente, nem todos os desenvolvedores adicionam o seu projeto ao PyPI (apesar de ser muito fácil fazer isso). Por isso, algumas vezes teremos que copiar o projeto direto do GitHub, instalar os módulos relacionados e rodar a ferramenta referindo-se diretamente ao arquivo do código ao invés do nome do comando.</p>
+<p>Agora vamos instalar outra ferramenta para pesquisar nickname em redes sociais, o blackbird (<a href="https://github.com/p1ngul1n0/blackbird" class="uri">https://github.com/p1ngul1n0/blackbird</a>).</p>
+<p>Digite na linha de comando:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>cd Day_3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>git clone https:<span class="op">//</span>github.com<span class="op">/</span>p1ngul1n0<span class="op">/</span>blackbird</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>cd blackbird</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>pip install <span class="op">-</span>r requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>O <code>requirements.txt</code> contém uma lista de pacotes necessários para rodar a ferramenta. Lembrando que o comando <code>cd</code> é usado para navegar entre pastas.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/ppo_10.png" class="img-fluid figure-img"></p>
+<p><img src="img/ppo_14.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>#&nbsp;Criei uma lista de nomes.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>girls <span class="op">=</span> [<span class="st">"Anna"</span>, <span class="st">"Maria"</span>, <span class="st">"Eva"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>#&nbsp;Mostrei um a um na tela, adicionando um ponto e vírgula.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> girl <span class="kw">in</span> girls:</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span> (girl <span class="op">+</span><span class="st">"; "</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>#&nbsp;Mostrei na tela de 0 a 19 (lembrando que a contagem em Python começa com 0).</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">20</span>):</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<blockquote class="blockquote">
-<p>Quando usar estruturas de condição ou repetição, sempre atente a identação (espaços para organizar o código). Eles devem ser sempre quatro espaços antes do código “interno”.</p>
-</blockquote>
-<p>Na minha opinião, este é o mínimo de teoria que você precisa para escrever scripts Python. No próximo capítulo vamos aprender na prática os conhecimentos que serão úteis para OSINT.</p>
+<p>Para chegar se a instação foi um sucesso, rode este comando:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>python blackbird.py <span class="op">-</span>u ivanov</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="º-opção-2" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="º-opção-2"><span class="header-section-number">9.3</span> 3º opção</h2>
+<p>Também é possivel inicializar ferramentas diretamente no Python, usando o módulo Subprocess (<a href="https://docs.python.org/3/library/subprocess.html" class="uri">https://docs.python.org/3/library/subprocess.html</a>) que permite rodar diferentes diretrizes de linhas de comando no código Python.</p>
+<p>Mova o arquivo <code>launch.py</code> da pasta <code>Day_3</code> para pasta <code>blackbird</code>. Use o comando abaixo.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>mv launch.py blackbird</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Antes de rodar o comando, tenha certeza que a sua pasta atual é a <code>Day_3</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/ppo_15.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Se você estiver na pasta <code>blackbird</code> use o comando abaixo para voltar um diretório:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>cd..</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Rode <code>launch.py</code>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/ppo_16.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>#&nbsp;Importei o módulo Subprocess.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> subprocess</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>#&nbsp;E rodei <code>blackbird.py</code>.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>subprocess.call(<span class="st">"python blackbird.py -u ivanov"</span>, shell<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Deste jeito é possivel rodar não apenas scripts Python, mas também scripts criados em outras linguagens de programação.</p>
+<p>A coisa mais importante que deve ser lembrada neste livro é que Blackbird e Thorndyke <strong>não</strong> são as melhores soluções de pesquisa em nickname. Shelock (<a href="https://github.com/sherlock-project/sherlock" class="uri">https://github.com/sherlock-project/sherlock</a>) e Maigret (<a href="https://github.com/soxoj/maigret" class="uri">https://github.com/soxoj/maigret</a>) verificam em mais sites. Tente instalar e roda-los.</p>
 
 
 </section>
@@ -582,14 +547,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./pag6.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dia 1 - Rode seu primeiro script</span></span>
+      <a href="./pag7.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Dia 2 - O mínimo da sintaxe básica do Python</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./pag8.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Dia 3 - Instalando e rodando o Python usando linha de comando</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

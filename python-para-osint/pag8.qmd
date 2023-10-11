@@ -1,0 +1,107 @@
+# Dia 3 - Instalando e rodando Python usando linha de comando
+
+Se voc&#234; acompanha minha meus [tweets](https://twitter.com/cyb_detective), sabe que sempre posto ferramentas de OSINT usando linhas de comando. A maioria delas s&#227;o construidas em Python, mas tamb&#233;m tem em outras linguagens como JavaScript (Node.js), Go, Bash (Shell script) e Rust.
+
+![](img/ppo_11.png){fig-align="center"}
+
+Neste cap&#237;tulo prenderemos como configurar e rodar Python deste jeito. Como exemplo, usaremos o [Thorndyke](https://github.com/rly0nheart/thorndyke) e o [Blackbird](https://github.com/p1ngul1n0/blackbird), duas ferramentas de pesquisa de usu&#225;rias em redes sociais, atrav&#233;s do nickname. Vou te mostrar 3 op&#231;&#245;es.
+
+
+## 1&#186; op&#231;&#227;o
+
+Instalando o gerenciador de pacotes `PyPI` (indexador de pacotes).
+
+> O Python Package Index (PyPI) &#233; um reposit&#243;rio de softwares Python, contendo mais de 300.000 mil pacotes. O usaremos em quase todos os cap&#237;tudos deste livro.
+
+Vamos come&#231;ar com o Thorndyke (<https://github.com/rly0nheart/thorndyke>), ferramenta muito simples para checar se o nickname de um usu&#225;rio existem em v&#225;rias redes sociais.
+
+Basta digitar na linha de comando:
+
+```python
+pip install thorndyke
+```
+![](img/ppo_12.png){fig-align="center"}
+
+Perfeito! Agora a ferramenta pode ser utilizada.
+
+Digite na linha de comando `thorndyke` seguido do nickname que voc&#234; deseja procurar:
+
+```python
+thorndyke escoladedados
+```
+
+![](img/ppo_13.png){fig-align="center"}
+
+
+## 2&#186; op&#231;&#227;o
+
+Infelizmente, nem todos os desenvolvedores adicionam o seu projeto ao PyPI (apesar de ser muito f&#225;cil fazer isso). Por isso, algumas vezes teremos que copiar o projeto direto do GitHub, instalar os m&#243;dulos relacionados e rodar a ferramenta referindo-se diretamente ao arquivo do c&#243;digo ao inv&#233;s do nome do comando.
+
+Agora vamos instalar outra ferramenta para pesquisar nickname em redes sociais, o blackbird (<https://github.com/p1ngul1n0/blackbird>).
+
+Digite na linha de comando:
+
+```python
+cd Day_3
+```
+```python
+git clone https://github.com/p1ngul1n0/blackbird
+```
+```python
+cd blackbird
+```
+```python
+pip install -r requirements.txt
+```
+
+O `requirements.txt` cont&#233;m uma lista de pacotes necess&#225;rios para rodar a ferramenta. Lembrando que o comando `cd` &#233; usado para navegar entre pastas.
+
+![](img/ppo_14.png){fig-align="center"}
+
+Para chegar se a insta&#231;&#227;o foi um sucesso, rode este comando:
+
+```python
+python blackbird.py -u ivanov
+```
+
+## 3&#186; op&#231;&#227;o
+
+Tamb&#233;m &#233; possivel inicializar ferramentas diretamente no Python, usando o m&#243;dulo Subprocess (<https://docs.python.org/3/library/subprocess.html>) que permite rodar diferentes diretrizes de linhas de comando no c&#243;digo Python. 
+
+Mova o arquivo `launch.py` da pasta `Day_3` para pasta `blackbird`. Use o comando abaixo.
+
+```python
+mv launch.py blackbird
+```
+
+Antes de rodar o comando, tenha certeza que a sua pasta atual &#233; a `Day_3`.
+
+![](img/ppo_15.png){fig-align="center"}
+
+Se voc&#234; estiver na pasta `blackbird` use o comando abaixo para voltar um diret&#243;rio:
+
+```python
+cd..
+```
+
+Rode `launch.py`:
+
+![](img/ppo_16.png){fig-align="center"}
+
+\#\ Importei o m&#243;dulo Subprocess.
+
+```python
+import subprocess
+```
+
+\#\ E rodei `blackbird.py`.
+
+```python
+subprocess.call("python blackbird.py -u ivanov", shell=True)
+```
+
+Deste jeito &#233; possivel rodar n&#227;o apenas scripts Python, mas tamb&#233;m scripts criados em outras linguagens de programa&#231;&#227;o.
+
+A coisa mais importante que deve ser lembrada neste livro &#233; que Blackbird e Thorndyke **n&#227;o** s&#227;o as melhores solu&#231;&#245;es de pesquisa em nickname. Shelock (<https://github.com/sherlock-project/sherlock>) e Maigret (<https://github.com/soxoj/maigret>) verificam em mais sites. Tente instalar e roda-los. 
+
+

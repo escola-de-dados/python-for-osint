@@ -145,5 +145,47 @@
     "title": "8  Dia 2 - O mínimo da sintaxe básica do Python",
     "section": "8.2 Estrutura condicional",
     "text": "8.2 Estrutura condicional\nÉ uma construção sintática que permite efetuar uma ação a partir de uma condição estabelecida. Vamos ver um exemplo.\nRode condition.py:\n\n\n\n\n\n# Primeiro usamos a função input() para pedir a idade da usuária.\nage = input('How old are you?\\n')\n# Se ela entrar com um valor maior que 27, nós respondemos que ela está muito velha.\nif int(age) &gt; 27:\n  print(\"You are so old\")\n# Se for menor que 27, ela é muito nova.\nelif int(age) &lt; 27:\n  print(\"You are so young\")"
+  },
+  {
+    "objectID": "pag8.html",
+    "href": "pag8.html",
+    "title": "9  Dia 3 - Instalando e rodando o Python usando linha de comando",
+    "section": "",
+    "text": "Se você acompanha minha meus tweets, sabe que sempre posto ferramentas de OSINT usando linhas de comando. A maioria delas são construidas em Python, mas também tem em outras linguagens como JavaScript (Node.js), Go, Bash (Shell script) e Rust.\n\n\n\n\n\nNeste capítulo prenderemos como configurar e rodar Python deste jeito. Como exemplo, usaremos o Thorndyke e o Blackbird, duas ferramentas de pesquisa de usuários em redes sociais, através do nickname."
+  },
+  {
+    "objectID": "pag8.html#º-maneira",
+    "href": "pag8.html#º-maneira",
+    "title": "9  Dia 3 - Instalando e rodando o Python usando linha de comando",
+    "section": "9.1 1º maneira",
+    "text": "9.1 1º maneira\nInstalando o gerenciador de pacotes PyPI (indexador de pacotes).\n\nO Python Package Index (PyPI) é um repositório de softwares Python, contendo mais de 300.000 mil pacotes. O usaremos em quase todos os capítudos deste livro.\n\nVamos começar com o Thorndyke https://github.com/rly0nheart/thorndyke, ferramenta muito simples para checar se o nickname de um usuário existem em várias redes sociais.\nBasta digitar na linha de comando:\npip install thorndyke\n\n\n\n\n\nPerfeito! Agora a ferramenta pode ser utilizada.\nDigite na linha de comando thorndyke seguido do nickname que você deseja procurar:\nthorndyke escoladedados"
+  },
+  {
+    "objectID": "pag8.html#º-maneira-1",
+    "href": "pag8.html#º-maneira-1",
+    "title": "9  Dia 3 - Instalando e rodando o Python usando linha de comando",
+    "section": "9.2 2º maneira",
+    "text": "9.2 2º maneira\nInfelizmente, nem todos os desenvolvedores adicionam o seu projeto ao PyPI (apesar de ser muito fácil fazer isso). Por isso, algumas vezes teremos que copiar o projeto direto do GitHub, instalar os módulos relacionados e rodar a ferramenta referindo-se diretamente ao arquivo do código ao invés do nome do comando.\nAgora vamos instalar outra ferramenta para pesquisar nickname em redes sociais, o blackbird https://github.com/p1ngul1n0/blackbird.\nDigite na linha de comando:\ncd Day_3\ngit clone https://github.com/p1ngul1n0/blackbird\ncd blackbird\npip install -r requirements.txt\nO requirements.txt contém uma lista de pacotes necessárias para rodar a ferramenta. Lembrando que o comando cd é usado para navegar entre pastas."
+  },
+  {
+    "objectID": "pag8.html#º-opção",
+    "href": "pag8.html#º-opção",
+    "title": "9  Dia 3 - Instalando e rodando o Python usando linha de comando",
+    "section": "9.1 1º opção",
+    "text": "9.1 1º opção\nInstalando o gerenciador de pacotes PyPI (indexador de pacotes).\n\nO Python Package Index (PyPI) é um repositório de softwares Python, contendo mais de 300.000 mil pacotes. O usaremos em quase todos os capítudos deste livro.\n\nVamos começar com o Thorndyke (https://github.com/rly0nheart/thorndyke), ferramenta muito simples para checar se o nickname de um usuário existem em várias redes sociais.\nBasta digitar na linha de comando:\npip install thorndyke\n\n\n\n\n\nPerfeito! Agora a ferramenta pode ser utilizada.\nDigite na linha de comando thorndyke seguido do nickname que você deseja procurar:\nthorndyke escoladedados"
+  },
+  {
+    "objectID": "pag8.html#º-opção-1",
+    "href": "pag8.html#º-opção-1",
+    "title": "9  Dia 3 - Instalando e rodando o Python usando linha de comando",
+    "section": "9.2 2º opção",
+    "text": "9.2 2º opção\nInfelizmente, nem todos os desenvolvedores adicionam o seu projeto ao PyPI (apesar de ser muito fácil fazer isso). Por isso, algumas vezes teremos que copiar o projeto direto do GitHub, instalar os módulos relacionados e rodar a ferramenta referindo-se diretamente ao arquivo do código ao invés do nome do comando.\nAgora vamos instalar outra ferramenta para pesquisar nickname em redes sociais, o blackbird (https://github.com/p1ngul1n0/blackbird).\nDigite na linha de comando:\ncd Day_3\ngit clone https://github.com/p1ngul1n0/blackbird\ncd blackbird\npip install -r requirements.txt\nO requirements.txt contém uma lista de pacotes necessários para rodar a ferramenta. Lembrando que o comando cd é usado para navegar entre pastas.\n\n\n\n\n\nPara chegar se a instação foi um sucesso, rode este comando:\npython blackbird.py -u ivanov"
+  },
+  {
+    "objectID": "pag8.html#º-opção-2",
+    "href": "pag8.html#º-opção-2",
+    "title": "9  Dia 3 - Instalando e rodando o Python usando linha de comando",
+    "section": "9.3 3º opção",
+    "text": "9.3 3º opção\nTambém é possivel inicializar ferramentas diretamente no Python, usando o módulo Subprocess (https://docs.python.org/3/library/subprocess.html) que permite rodar diferentes diretrizes de linhas de comando no código Python.\nMova o arquivo launch.py da pasta Day_3 para pasta blackbird. Use o comando abaixo.\nmv launch.py blackbird\nAntes de rodar o comando, tenha certeza que a sua pasta atual é a Day_3.\n\n\n\n\n\nSe você estiver na pasta blackbird use o comando abaixo para voltar um diretório:\ncd..\nRode launch.py:\n\n\n\n\n\n# Importei o módulo Subprocess.\nimport subprocess\n# E rodei blackbird.py.\nsubprocess.call(\"python blackbird.py -u ivanov\", shell=True)\nDeste jeito é possivel rodar não apenas scripts Python, mas também scripts criados em outras linguagens de programação.\nA coisa mais importante que deve ser lembrada neste livro é que Blackbird e Thorndyke não são as melhores soluções de pesquisa em nickname. Shelock (https://github.com/sherlock-project/sherlock) e Maigret (https://github.com/soxoj/maigret) verificam em mais sites. Tente instalar e roda-los."
   }
 ]
