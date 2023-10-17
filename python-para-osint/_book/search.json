@@ -170,22 +170,36 @@
   {
     "objectID": "pag8.html#º-opção",
     "href": "pag8.html#º-opção",
-    "title": "9  Dia 3 - Instalando e rodando o Python usando linha de comando",
+    "title": "9  Dia 3 - Instalando e rodando Python usando linha de comando",
     "section": "9.1 1º opção",
     "text": "9.1 1º opção\nInstalando o gerenciador de pacotes PyPI (indexador de pacotes).\n\nO Python Package Index (PyPI) é um repositório de softwares Python, contendo mais de 300.000 mil pacotes. O usaremos em quase todos os capítudos deste livro.\n\nVamos começar com o Thorndyke (https://github.com/rly0nheart/thorndyke), ferramenta muito simples para checar se o nickname de um usuário existem em várias redes sociais.\nBasta digitar na linha de comando:\npip install thorndyke\n\n\n\n\n\nPerfeito! Agora a ferramenta pode ser utilizada.\nDigite na linha de comando thorndyke seguido do nickname que você deseja procurar:\nthorndyke escoladedados"
   },
   {
     "objectID": "pag8.html#º-opção-1",
     "href": "pag8.html#º-opção-1",
-    "title": "9  Dia 3 - Instalando e rodando o Python usando linha de comando",
+    "title": "9  Dia 3 - Instalando e rodando Python usando linha de comando",
     "section": "9.2 2º opção",
     "text": "9.2 2º opção\nInfelizmente, nem todos os desenvolvedores adicionam o seu projeto ao PyPI (apesar de ser muito fácil fazer isso). Por isso, algumas vezes teremos que copiar o projeto direto do GitHub, instalar os módulos relacionados e rodar a ferramenta referindo-se diretamente ao arquivo do código ao invés do nome do comando.\nAgora vamos instalar outra ferramenta para pesquisar nickname em redes sociais, o blackbird (https://github.com/p1ngul1n0/blackbird).\nDigite na linha de comando:\ncd Day_3\ngit clone https://github.com/p1ngul1n0/blackbird\ncd blackbird\npip install -r requirements.txt\nO requirements.txt contém uma lista de pacotes necessários para rodar a ferramenta. Lembrando que o comando cd é usado para navegar entre pastas.\n\n\n\n\n\nPara chegar se a instação foi um sucesso, rode este comando:\npython blackbird.py -u ivanov"
   },
   {
     "objectID": "pag8.html#º-opção-2",
     "href": "pag8.html#º-opção-2",
-    "title": "9  Dia 3 - Instalando e rodando o Python usando linha de comando",
+    "title": "9  Dia 3 - Instalando e rodando Python usando linha de comando",
     "section": "9.3 3º opção",
     "text": "9.3 3º opção\nTambém é possivel inicializar ferramentas diretamente no Python, usando o módulo Subprocess (https://docs.python.org/3/library/subprocess.html) que permite rodar diferentes diretrizes de linhas de comando no código Python.\nMova o arquivo launch.py da pasta Day_3 para pasta blackbird. Use o comando abaixo.\nmv launch.py blackbird\nAntes de rodar o comando, tenha certeza que a sua pasta atual é a Day_3.\n\n\n\n\n\nSe você estiver na pasta blackbird use o comando abaixo para voltar um diretório:\ncd..\nRode launch.py:\n\n\n\n\n\n# Importei o módulo Subprocess.\nimport subprocess\n# E rodei blackbird.py.\nsubprocess.call(\"python blackbird.py -u ivanov\", shell=True)\nDeste jeito é possivel rodar não apenas scripts Python, mas também scripts criados em outras linguagens de programação.\nA coisa mais importante que deve ser lembrada neste livro é que Blackbird e Thorndyke não são as melhores soluções de pesquisa em nickname. Shelock (https://github.com/sherlock-project/sherlock) e Maigret (https://github.com/soxoj/maigret) verificam em mais sites. Tente instalar e roda-los."
+  },
+  {
+    "objectID": "pag9.html#escrevendo-arquivos",
+    "href": "pag9.html#escrevendo-arquivos",
+    "title": "10  Dia 4 - Lendo e escrevendo arquivos",
+    "section": "10.1 Escrevendo arquivos",
+    "text": "10.1 Escrevendo arquivos\nRode write_text.py:\n\n\n\n\n\n# Cria uma variável e atribui um texto\nresult = \"Results text\"\n# Abre (e ao mesmo tempo cria) o arquivo results.txt\nresults_file = open(\"results.txt\", \"a\")\n# Escreve o valor da variável result no arquivo result_file\nresults_file.write(result) \n# Fecha o arquivo\nresults_file.close()\n\nNote que a função open() tem dois argumentos. O primeiro é o nome do &gt;arquivo e o segundo é o que chamamos de “tipos de abertura”.\nExemplos de tipos de abertura:\n“r” - abre um arquivo para leitura;\n“a” - abre um arquivo para adicionar itens (cria o arquivo se não existir);\n“w” - abre um arquivo para escrever (cria o arquivo se não existir);\n“x” - cria um novo arquivo.\n\nLembre-se que em algumas situações não é necessário fazer um código complexo para escrever o resultado do script em um arquivo, porque o jeio mais fácil para escrever os resultados de um script Python em um arquivo basta simplesmente adicionar &gt; e o nome do arquivo a ser executado:\n\n\n\n\n\nAgora vamos tentar ler o texto do arquivo que criamos."
+  },
+  {
+    "objectID": "pag9.html#lendo-arquivos",
+    "href": "pag9.html#lendo-arquivos",
+    "title": "10  Dia 4 - Lendo e escrevendo arquivos",
+    "section": "10.2 Lendo arquivos",
+    "text": "10.2 Lendo arquivos\nRode read_file.py:\n\n\n\n\n\n# Abre o arquivo results.txt\nresults_file = open(\"results.txt\", \"r\")\n# Mostra na tela o conteU+00FAdo dentro do arquivo results.txt\nprint(results_file.read())\nExiste outro jeito também. Com uma simples estrutura de repetição (loop), podemos ler as linhas de um arquivo, uma por vez, e executar uma ação em cada linha.\n\n\n\n\n\nPor favor, adicione algums conteúdos para o arquivo results.txt e rode read_lines_loop.py:\n\n\n\n\n\n# Cria uma variável com o número da linha\nstringNumber = 1\n# Abre o arquivo results.txt\nwith open(\"results.txt\") as f:\n# Vai através das linhas e mostra cada linha com o número da linha\nfor line in f:\n  print(str(stringNumber) + \". \" + line)\n# Adiciona mais um número por linha\nstringNumber += 1\nNote que usamos str() para converter uma variável do tipo integer para string. Sempre faça isso quando concatenar uma variável de texto e um número dentro de uma string.\nSe não quiser mostrar todas as linhas do arquivo, mas apenas as linhas com determinados números, você pode usar a função readlines, que converte as linhas dos arquivos em itens das listas.\nRode readlines.py:\n\n\n\n\n\n# Abre o arquivo results.txt\nf = open(\"results.txt\", \"r\")\n# Cria um array cujos elementos das linhas são as linhas do arquivo results.txt\nstringList=f.readlines()\n# Mostra na tela os elementos com o índice (a segunda linha do arquivo). Não esqueça que a contagem começa do zero.\nprint(stringList[1])\nSe por acaso precisar escrever os elementos de um array para uma arquivo, onde elemento serja escrito em uma linha separada, use o métodowritelines().\nArmazenar dados em arquivos nem sempre é uma boa prática (embora seja a opção mais fácil de aprender). Se você trabalha regularmente com arquivos que tem dezenas ou centenas de megabites, considere usar bases de dados. Veremos um pouco sobre isso no capítulo 8."
   }
 ]

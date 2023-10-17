@@ -1,0 +1,139 @@
+# Dia 4 - Lendo e escrevendo arquivos
+
+Nos coment&#225;rios dos tweets em [&#64;cyb_detective](https://twitter.com/cyb_detective) sobre ferramentas na linha de comando, frequentemente perguntam "Por que precisamos disso se existem aplica&#231;&#245;es web com fun&#231;&#245;es semelhantes?".
+
+Uma das vantagens de usar ferramentas na linha de comando em investiga&#231;&#245;es &#233; a capacidade de salvar resultados em arquivos para que possam ser analisados de maneira automatizada depois. Neste cap&#237;tulo iremos aprender como ler e escrever dados de arquivos de texto usando fun&#231;&#245;es padr&#227;o do Python. Vamos come&#231;ar com a escrita.
+
+## Escrevendo arquivos
+
+Rode `write_text.py`:
+
+![](img/ppo_17.png){fig-align="center"}
+
+
+\#\ Cria uma vari&#225;vel e atribui um texto
+
+```python
+result = "Results text"
+```
+
+\#\ Abre (e ao mesmo tempo cria) o arquivo `results.txt`
+
+```python
+results_file = open("results.txt", "a")
+```
+
+\#\ Escreve o valor da vari&#225;vel `result` no arquivo `result_file`
+
+```python
+results_file.write(result) 
+```
+
+\#\ Fecha o arquivo
+
+```python
+results_file.close()
+```
+
+>Note que a fun&#231;&#227;o `open()` tem dois argumentos. O primeiro &#233; o nome do >arquivo e o segundo &#233; o que chamamos de "tipos de abertura".
+>
+>Exemplos de tipos de abertura:
+>
+>"r" - abre um arquivo para leitura;
+>
+>"a" - abre um arquivo para adicionar itens (cria o arquivo se n&#227;o existir);
+>
+>"w" - abre um arquivo para escrever (cria o arquivo se n&#227;o existir);
+>
+>"x" - cria um novo arquivo.
+
+Lembre-se que em algumas situa&#231;&#245;es n&#227;o &#233; necess&#225;rio fazer um c&#243;digo complexo para escrever o resultado do script em um arquivo, porque o jeio mais f&#225;cil para escrever os resultados de um script Python em um arquivo basta simplesmente adicionar `>` e o nome do arquivo a ser executado:
+
+![](img/ppo_18.png){fig-align="center"}
+
+
+Agora vamos tentar ler o texto do arquivo que criamos.
+
+## Lendo arquivos
+
+Rode `read_file.py`:
+
+![](img/ppo_19.png){fig-align="center"}
+
+
+\#\ Abre o arquivo `results.txt`
+
+```python
+results_file = open("results.txt", "r")
+```
+
+\#\ Mostra na tela o conteU+00FAdo dentro do arquivo `results.txt`
+
+```python
+print(results_file.read())
+```
+
+Existe outro jeito tamb&#233;m. Com uma simples estrutura de repeti&#231;&#227;o (loop), podemos ler as linhas de um arquivo, uma por vez, e executar uma a&#231;&#227;o em cada linha. 
+
+![](img/ppo_20.png){fig-align="center"}
+
+Por favor, adicione algums conte&#250;dos para o arquivo `results.txt` e rode `read_lines_loop.py`:
+
+![](img/ppo_21.png){fig-align="center"}
+
+\#\ Cria uma vari&#225;vel com o n&#250;mero da linha
+
+```python
+stringNumber = 1
+```
+
+\#\ Abre o arquivo `results.txt`
+
+```python
+with open("results.txt") as f:
+```
+
+\#\ Vai atrav&#233;s das linhas e mostra cada linha com o n&#250;mero da linha
+
+```python
+for line in f:
+  print(str(stringNumber) + ". " + line)
+```
+
+\#\ Adiciona mais um n&#250;mero por linha
+
+```python
+stringNumber += 1
+```
+
+Note que usamos `str()` para converter uma vari&#225;vel do tipo integer para string. Sempre fa&#231;a isso quando concatenar uma vari&#225;vel de texto e um n&#250;mero dentro de uma string.
+
+Se n&#227;o quiser mostrar todas as linhas do arquivo, mas apenas as linhas com determinados n&#250;meros, voc&#234; pode usar a fun&#231;&#227;o `readlines`, que converte as linhas dos arquivos em itens das listas. 
+
+Rode `readlines.py`:
+
+![](img/ppo_22.png){fig-align="center"}
+
+\#\ Abre o arquivo `results.txt`
+
+```python
+f = open("results.txt", "r")
+```
+
+\#\ Cria um array cujos elementos das linhas s&#227;o as linhas do arquivo `results.txt`
+
+```python
+stringList=f.readlines()
+```
+
+\#\ Mostra na tela os elementos com o &#237;ndice (a segunda linha do arquivo). N&#227;o esque&#231;a que a contagem come&#231;a do zero.
+
+```python
+print(stringList[1])
+```
+
+Se por acaso precisar escrever os elementos de um array para uma arquivo, onde elemento serja escrito em uma linha separada, use o m&#233;todo`writelines()`.
+
+Armazenar dados em arquivos nem sempre &#233; uma boa pr&#225;tica (embora seja a op&#231;&#227;o mais f&#225;cil de aprender). Se voc&#234; trabalha regularmente com arquivos que tem dezenas ou centenas de megabites, considere usar bases de dados. Veremos um pouco sobre isso no cap&#237;tulo 8.  
+
+

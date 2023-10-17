@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Python para OSINT em 21 dias - 9&nbsp; Dia 3 - Instalando e rodando Python usando linha de comando</title>
+<title>Python para OSINT em 21 dias - 10&nbsp; Dia 4 - Lendo e escrevendo arquivos</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./pag9.html" rel="next">
-<link href="./pag7.html" rel="prev">
+<link href="./pag8.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -108,7 +107,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pag8.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Dia 3 - Instalando e rodando Python usando linha de comando</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pag9.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Dia 4 - Lendo e escrevendo arquivos</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -195,13 +194,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pag8.html" class="sidebar-item-text sidebar-link active">
+  <a href="./pag8.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Dia 3 - Instalando e rodando Python usando linha de comando</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pag9.html" class="sidebar-item-text sidebar-link">
+  <a href="./pag9.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Dia 4 - Lendo e escrevendo arquivos</span></span></a>
   </div>
 </li>
@@ -215,9 +214,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#º-opção" id="toc-º-opção" class="nav-link active" data-scroll-target="#º-opção"><span class="header-section-number">9.1</span> 1º opção</a></li>
-  <li><a href="#º-opção-1" id="toc-º-opção-1" class="nav-link" data-scroll-target="#º-opção-1"><span class="header-section-number">9.2</span> 2º opção</a></li>
-  <li><a href="#º-opção-2" id="toc-º-opção-2" class="nav-link" data-scroll-target="#º-opção-2"><span class="header-section-number">9.3</span> 3º opção</a></li>
+  <li><a href="#escrevendo-arquivos" id="toc-escrevendo-arquivos" class="nav-link active" data-scroll-target="#escrevendo-arquivos"><span class="header-section-number">10.1</span> Escrevendo arquivos</a></li>
+  <li><a href="#lendo-arquivos" id="toc-lendo-arquivos" class="nav-link" data-scroll-target="#lendo-arquivos"><span class="header-section-number">10.2</span> Lendo arquivos</a></li>
   </ul>
 </nav>
     </div>
@@ -226,7 +224,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Dia 3 - Instalando e rodando Python usando linha de comando</span></h1>
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Dia 4 - Lendo e escrevendo arquivos</span></h1>
 </div>
 
 
@@ -241,79 +239,89 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>Se você acompanha minha meus <a href="https://twitter.com/cyb_detective">tweets</a>, sabe que sempre posto ferramentas de OSINT usando linhas de comando. A maioria delas são construidas em Python, mas também tem em outras linguagens como JavaScript (Node.js), Go, Bash (Shell script) e Rust.</p>
+<p>Nos comentários dos tweets em <a href="https://twitter.com/cyb_detective">@cyb_detective</a> sobre ferramentas na linha de comando, frequentemente perguntam “Por que precisamos disso se existem aplicações web com funções semelhantes?”.</p>
+<p>Uma das vantagens de usar ferramentas na linha de comando em investigações é a capacidade de salvar resultados em arquivos para que possam ser analisados de maneira automatizada depois. Neste capítulo iremos aprender como ler e escrever dados de arquivos de texto usando funções padrão do Python. Vamos começar com a escrita.</p>
+<section id="escrevendo-arquivos" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="escrevendo-arquivos"><span class="header-section-number">10.1</span> Escrevendo arquivos</h2>
+<p>Rode <code>write_text.py</code>:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/ppo_11.png" class="img-fluid figure-img"></p>
+<p><img src="img/ppo_17.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>Neste capítulo prenderemos como configurar e rodar Python deste jeito. Como exemplo, usaremos o <a href="https://github.com/rly0nheart/thorndyke">Thorndyke</a> e o <a href="https://github.com/p1ngul1n0/blackbird">Blackbird</a>, duas ferramentas de pesquisa de usuárias em redes sociais, através do nickname. Vou te mostrar 3 opções.</p>
-<section id="º-opção" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="º-opção"><span class="header-section-number">9.1</span> 1º opção</h2>
-<p>Instalando o gerenciador de pacotes <code>PyPI</code> (indexador de pacotes).</p>
+<p>#&nbsp;Cria uma variável e atribui um texto</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> <span class="st">"Results text"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>#&nbsp;Abre (e ao mesmo tempo cria) o arquivo <code>results.txt</code></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>results_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">"results.txt"</span>, <span class="st">"a"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>#&nbsp;Escreve o valor da variável <code>result</code> no arquivo <code>result_file</code></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>results_file.write(result) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>#&nbsp;Fecha o arquivo</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>results_file.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <blockquote class="blockquote">
-<p>O Python Package Index (PyPI) é um repositório de softwares Python, contendo mais de 300.000 mil pacotes. O usaremos em quase todos os capítudos deste livro.</p>
+<p>Note que a função <code>open()</code> tem dois argumentos. O primeiro é o nome do &gt;arquivo e o segundo é o que chamamos de “tipos de abertura”.</p>
+<p>Exemplos de tipos de abertura:</p>
+<p>“r” - abre um arquivo para leitura;</p>
+<p>“a” - abre um arquivo para adicionar itens (cria o arquivo se não existir);</p>
+<p>“w” - abre um arquivo para escrever (cria o arquivo se não existir);</p>
+<p>“x” - cria um novo arquivo.</p>
 </blockquote>
-<p>Vamos começar com o Thorndyke (<a href="https://github.com/rly0nheart/thorndyke" class="uri">https://github.com/rly0nheart/thorndyke</a>), ferramenta muito simples para checar se o nickname de um usuário existem em várias redes sociais.</p>
-<p>Basta digitar na linha de comando:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pip install thorndyke</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Lembre-se que em algumas situações não é necessário fazer um código complexo para escrever o resultado do script em um arquivo, porque o jeio mais fácil para escrever os resultados de um script Python em um arquivo basta simplesmente adicionar <code>&gt;</code> e o nome do arquivo a ser executado:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/ppo_12.png" class="img-fluid figure-img"></p>
+<p><img src="img/ppo_18.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>Perfeito! Agora a ferramenta pode ser utilizada.</p>
-<p>Digite na linha de comando <code>thorndyke</code> seguido do nickname que você deseja procurar:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>thorndyke escoladedados</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/ppo_13.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
+<p>Agora vamos tentar ler o texto do arquivo que criamos.</p>
 </section>
-<section id="º-opção-1" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="º-opção-1"><span class="header-section-number">9.2</span> 2º opção</h2>
-<p>Infelizmente, nem todos os desenvolvedores adicionam o seu projeto ao PyPI (apesar de ser muito fácil fazer isso). Por isso, algumas vezes teremos que copiar o projeto direto do GitHub, instalar os módulos relacionados e rodar a ferramenta referindo-se diretamente ao arquivo do código ao invés do nome do comando.</p>
-<p>Agora vamos instalar outra ferramenta para pesquisar nickname em redes sociais, o blackbird (<a href="https://github.com/p1ngul1n0/blackbird" class="uri">https://github.com/p1ngul1n0/blackbird</a>).</p>
-<p>Digite na linha de comando:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>cd Day_3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>git clone https:<span class="op">//</span>github.com<span class="op">/</span>p1ngul1n0<span class="op">/</span>blackbird</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>cd blackbird</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>pip install <span class="op">-</span>r requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>O <code>requirements.txt</code> contém uma lista de pacotes necessários para rodar a ferramenta. Lembrando que o comando <code>cd</code> é usado para navegar entre pastas.</p>
+<section id="lendo-arquivos" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="lendo-arquivos"><span class="header-section-number">10.2</span> Lendo arquivos</h2>
+<p>Rode <code>read_file.py</code>:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/ppo_14.png" class="img-fluid figure-img"></p>
+<p><img src="img/ppo_19.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>Para chegar se a instação foi um sucesso, rode este comando:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>python blackbird.py <span class="op">-</span>u ivanov</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="º-opção-2" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="º-opção-2"><span class="header-section-number">9.3</span> 3º opção</h2>
-<p>Também é possivel inicializar ferramentas diretamente no Python, usando o módulo Subprocess (<a href="https://docs.python.org/3/library/subprocess.html" class="uri">https://docs.python.org/3/library/subprocess.html</a>) que permite rodar diferentes diretrizes de linhas de comando no código Python.</p>
-<p>Mova o arquivo <code>launch.py</code> da pasta <code>Day_3</code> para pasta <code>blackbird</code>. Use o comando abaixo.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>mv launch.py blackbird</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Antes de rodar o comando, tenha certeza que a sua pasta atual é a <code>Day_3</code>.</p>
+<p>#&nbsp;Abre o arquivo <code>results.txt</code></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>results_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">"results.txt"</span>, <span class="st">"r"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>#&nbsp;Mostra na tela o conteU+00FAdo dentro do arquivo <code>results.txt</code></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(results_file.read())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Existe outro jeito também. Com uma simples estrutura de repetição (loop), podemos ler as linhas de um arquivo, uma por vez, e executar uma ação em cada linha.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/ppo_15.png" class="img-fluid figure-img"></p>
+<p><img src="img/ppo_20.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>Se você estiver na pasta <code>blackbird</code> use o comando abaixo para voltar um diretório:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>cd..</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Rode <code>launch.py</code>:</p>
+<p>Por favor, adicione algums conteúdos para o arquivo <code>results.txt</code> e rode <code>read_lines_loop.py</code>:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/ppo_16.png" class="img-fluid figure-img"></p>
+<p><img src="img/ppo_21.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>#&nbsp;Importei o módulo Subprocess.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> subprocess</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>#&nbsp;E rodei <code>blackbird.py</code>.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>subprocess.call(<span class="st">"python blackbird.py -u ivanov"</span>, shell<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Deste jeito é possivel rodar não apenas scripts Python, mas também scripts criados em outras linguagens de programação.</p>
-<p>A coisa mais importante que deve ser lembrada neste livro é que Blackbird e Thorndyke <strong>não</strong> são as melhores soluções de pesquisa em nickname. Shelock (<a href="https://github.com/sherlock-project/sherlock" class="uri">https://github.com/sherlock-project/sherlock</a>) e Maigret (<a href="https://github.com/soxoj/maigret" class="uri">https://github.com/soxoj/maigret</a>) verificam em mais sites. Tente instalar e roda-los.</p>
+<p>#&nbsp;Cria uma variável com o número da linha</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>stringNumber <span class="op">=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>#&nbsp;Abre o arquivo <code>results.txt</code></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"results.txt"</span>) <span class="im">as</span> f:</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>#&nbsp;Vai através das linhas e mostra cada linha com o número da linha</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> f:</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="bu">str</span>(stringNumber) <span class="op">+</span> <span class="st">". "</span> <span class="op">+</span> line)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>#&nbsp;Adiciona mais um número por linha</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>stringNumber <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Note que usamos <code>str()</code> para converter uma variável do tipo integer para string. Sempre faça isso quando concatenar uma variável de texto e um número dentro de uma string.</p>
+<p>Se não quiser mostrar todas as linhas do arquivo, mas apenas as linhas com determinados números, você pode usar a função <code>readlines</code>, que converte as linhas dos arquivos em itens das listas.</p>
+<p>Rode <code>readlines.py</code>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/ppo_22.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>#&nbsp;Abre o arquivo <code>results.txt</code></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"results.txt"</span>, <span class="st">"r"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>#&nbsp;Cria um array cujos elementos das linhas são as linhas do arquivo <code>results.txt</code></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>stringList<span class="op">=</span>f.readlines()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>#&nbsp;Mostra na tela os elementos com o índice (a segunda linha do arquivo). Não esqueça que a contagem começa do zero.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(stringList[<span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Se por acaso precisar escrever os elementos de um array para uma arquivo, onde elemento serja escrito em uma linha separada, use o método<code>writelines()</code>.</p>
+<p>Armazenar dados em arquivos nem sempre é uma boa prática (embora seja a opção mais fácil de aprender). Se você trabalha regularmente com arquivos que tem dezenas ou centenas de megabites, considere usar bases de dados. Veremos um pouco sobre isso no capítulo 8.</p>
 
 
 </section>
@@ -554,14 +562,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./pag7.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Dia 2 - O mínimo da sintaxe básica do Python</span></span>
+      <a href="./pag8.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Dia 3 - Instalando e rodando Python usando linha de comando</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./pag9.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Dia 4 - Lendo e escrevendo arquivos</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
