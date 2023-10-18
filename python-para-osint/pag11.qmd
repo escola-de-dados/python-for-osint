@@ -1,0 +1,121 @@
+# Dia 6 - JSON
+
+No &#250;ltimo cap&#237;tulo conversamos sobre o fato de muitos dados &#250;teis para investiga&#231;&#245;es podem ser obtidos atrav&#233;s de APIs. Muitas delas retornam dados em formato JSON (JavaScript Object Notation), assim como CSV e XML (falaremos destes formatos em outros cap&#237;tulos).
+
+No cap&#237;tulo anterior tamb&#233;m vimos muitos exemplos bons de dados JSON quando trabalhamos com a API do [GitHub](https://docs.github.com/pt/rest?apiVersion=2022-11-28). 
+
+
+
+![](img/ppo_28.png){fig-align="center"}
+
+
+
+Na resposta da consulta, temos uma lista de 30 objetos (items[0], items[1],
+items[2] etc), cada um correspondendo a um usu&#225;rio espec&#237;fico. 
+
+Cada objeto tem propriedades que armazenam informa&#231;&#245;es sobre o usu&#225;rio: login, html_url, id, flowers_url, etc.
+
+Agora vamos tentar extrair dados de arquivos JSON usando c&#243;digo. O pacote JSON (<https://docs.python.org/3/library/json.html>) est&#225; dispon&#237;vel em Python por padr&#227;o e n&#227;o requer instala&#231;&#227;o.
+
+
+## Lendo um campo
+
+Rode `read_one_field.py`:
+
+
+
+
+![](img/ppo_29.png){fig-align="center"}
+
+
+
+\#\ Importa o m&#243;dulo *json* e o *requests*
+
+```python
+import json
+import requests
+```
+
+\#\ Faz a mesma requisi&#231;&#227;o para a API GitHub, feita no cap&#237;tulo anterior
+
+```python
+response = requests.get("https://api.github.com/search/users?q=javascript")
+```
+
+\#\ Atribui o vari&#225;vel o valor de resposta da consulta em formato json 
+
+```python
+Json_data = response.json()
+```
+
+\#\ Mostra como sa&#237;da o n&#250;mero de resultados  
+
+```python
+print (json_data['total_count'])
+```
+
+\#\ Mostra como sa&#237;da o primeiro perfil do GitHub
+
+```python
+print (json_data['items'][0]['html_url'])
+```
+
+Frequentemente precisaremos extrair n&#227;o apenas um valor, mas informa&#231;&#245;es sobre listas de objetos inteiras. Por exemplo, os links de perfis de usu&#225;rios do GitHub extraidos no exemplo acima.
+
+## Lendo lista com muitos campos
+
+Rode ` read_list_of_fields.py`:
+
+
+
+
+
+![](img/ppo_30.png){fig-align="center"}
+
+
+
+
+\#\ Importa o m&#243;dulo *json* e o *requests*
+
+```python
+import json
+import requests
+```
+
+\#\ Faz a mesma requisi&#231;&#227;o para a API GitHub
+
+```python
+response = requests.get("https://api.github.com/search/users?q=javascript")
+```
+
+\#\ Pega o resulto em formato json 
+
+```python
+json_data=response.json()
+```
+
+\#\ Conta o n&#250;mero de resultados
+
+```python
+usersCount = len(json_data['items'])-1
+```
+
+\#\ Mostra na tela um link para cada resultado em uma estrutura de repeti&#231;&#227;o
+
+```python
+for x in range(usersCount):
+ print (json_data['items'][x]['html_url'])
+```
+
+
+
+
+
+![](img/ppo_31.png){fig-align="center"}
+
+
+
+
+Geralmente &#233; complicado entender como marcar o caminho certo do dado em estruturas de arquivos JSON. Alguns servi&#231;os podem ajudar a descobrir isso, tais como <https://jsonpath.com/> e <https://jsonpathfinder.com/>.
+
+Antes de escrever algum c&#243;digo para processar arquivos JSON, lembre que algumas vezes &#233; mais f&#225;cil converter para CSV e depois tirar as colunas que tem os dados que voc&#234; precisa. Sugerimos este site para fazer isto: <https://www.convertcsv.com/json-to-csv.htm>.
