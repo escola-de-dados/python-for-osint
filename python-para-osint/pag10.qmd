@@ -1,0 +1,72 @@
+# Dia 5 - Manipulando requisi&#231;&#245;es HTTP e trabalhando com APIs
+
+Quando voc&#234; abre uma p&#225;gina web em seu navegador, &#233; feita uma requisi&#231;&#227;o ao servidor. Em resposta a isso, o servidor retorna o status, cabe&#231;alhos e o corpo da resposta (c&#243;digo html da p&#225;gina, alguns dados em csv JSON ou XML, por exemplo). 
+
+![](img/ppo_23.png){fig-align="center"}
+
+
+O jeito mais f&#225;cil de entender visualmente o que est&#225; acontecendo &#233; abrir o site <https://resttesttest.com/>, colar o link de algum site e clicar no bot&#227;o *AJAX request*.
+
+OSINT frequentemente precisa automatizar dados coletados de p&#225;ginas web ou APIs (Application Programming Interface). O conhecimento b&#225;sico necess&#225;rio para fazer isso &#233; escrever c&#243;digo que enviem requisi&#231;&#245;es para servidores web e processe as respostas.
+
+>APIs (Application Programming Interface) &#233; uma tecnologia que permite intera&#231;&#227;o com uma aplica&#231;&#227;o que envia solicita&#231;&#227;o ao servidor. A API do GitHub permite recuperar dados de usu&#225;rios, assim como fazer mudan&#231;as em reposit&#243;rios, entre outras coisas, por exemplo.
+
+Para isto n&#243;s usaremos o pacote *requests* (<https://pypi.org/project/requests/>).
+
+![](img/ppo_24.png){fig-align="center"}
+
+
+Instale o pacote *requests*:
+
+```python
+pip install requests
+```
+Rode o arquivo `api_request.py`:
+
+![](img/ppo_25.png){fig-align="center"} 
+
+
+\#\ Adiciona o pacote *requests* para o arquivo de script usando o comando `import`
+
+```python
+import requests
+```
+
+\#\ Faz uma requisi&#231;&#227;o
+
+```python
+response = requests.get("https://api.github.com/search/users?q=javascript")
+```
+
+\#\ Mostra o resultado na tela em formato JSON
+
+```python
+print(response.json())
+```
+
+H&#225; um enorme n&#250;mero de APIs, entre pagos e e gratu&#237;tos que fornece dados &#250;teis para OSINT. Por exemplo, informa&#231;&#245;es sobre:
+
+- N&#250;meros de telefone, endere&#231;os e ceps;
+- Empresas;
+- Dom&#237;nios e endere&#231;os IP;
+- Carteiras e transa&#231;&#245;es criptografadas;
+- Usu&#225;rios de diferentes redes sociais.
+
+Uma lista de mais de 100 APIs OSINT &#250;teis pode ser encontrada neste reposit&#243;rio do GitHub: <https://github.com/cipher387/API-s-for-OSINT>
+
+
+![](img/ppo_26.png){fig-align="center"}
+
+
+N&#227;o &#233; necess&#225;rio escrever um script Python separado para testar APIs diferentes. &#201; melhor usar um servi&#231;o online que consiga simular diferentes tipos de requisi&#231;&#227;o e m&#233;todo de autoriza&#231;&#227;o, como o <https://reqbin.com/> e o <https://www.postman.com/>.
+
+
+
+![](img/ppo_27.png){fig-align="center"}
+
+
+Voltaremos a este t&#243;pico de requisi&#231;&#245;es na rede quando falarmos sobre arquivos JSON, raspagem e uso de servidores proxy. Iremos aprender como adicionar cabe&#231;alhos para consulta e extra&#231;&#227;o de dados dos textos de respostas. 
+
+
+
+
