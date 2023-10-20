@@ -222,5 +222,26 @@
     "title": "12  Dia 6 - JSON",
     "section": "12.2 Lendo lista com muitos campos",
     "text": "12.2 Lendo lista com muitos campos\nRode read_list_of_fields.py:\n\n\n\n\n\n# Importa o módulo json e o requests\nimport json\nimport requests\n# Faz a mesma requisição para a API GitHub\nresponse = requests.get(\"https://api.github.com/search/users?q=javascript\")\n# Pega o resulto em formato json\njson_data=response.json()\n# Conta o número de resultados\nusersCount = len(json_data['items'])-1\n# Mostra na tela um link para cada resultado em uma estrutura de repetição\nfor x in range(usersCount):\n print (json_data['items'][x]['html_url'])\n\n\n\n\n\nGeralmente é complicado entender como marcar o caminho certo do dado em estruturas de arquivos JSON. Alguns serviços podem ajudar a descobrir isso, tais como https://jsonpath.com/ e https://jsonpathfinder.com/.\nAntes de escrever algum código para processar arquivos JSON, lembre que algumas vezes é mais fácil converter para CSV e depois tirar as colunas que tem os dados que você precisa. Sugerimos este site para fazer isto: https://www.convertcsv.com/json-to-csv.htm."
+  },
+  {
+    "objectID": "pag12.html#escrevendo-em-arquivo-csv",
+    "href": "pag12.html#escrevendo-em-arquivo-csv",
+    "title": "13  Dia 7 - CSV",
+    "section": "13.1 Escrevendo em arquivo CSV",
+    "text": "13.1 Escrevendo em arquivo CSV\nRode write_csv.py:\n\n\n\n\n\n# Importa o pacote CSV (está disponível por padrão)\nimport csv\n# Abre e cria o arquivo test.csv\ncsv_file = open('test.csv', 'w')\n# Cria um objeto write e armazena o conteúdo do csv_file\nwriter = csv.writer(csv_file, delimiter =';')\n# Cria uma lista com os cabeçalhos\nheader = ['Last name', 'First name', 'Age', 'Country']\n# Cria uma lista que preenche a primeira linha de cada campo\ndata = ['Smith', 'John', '35', 'USA']\n# Escreve os dados do cabeçalho no arquivo\nwriter.writerow(header)\n# Escreve os dados da linha no arquivo\nwriter.writerow(data)\n# Fecha o arquivo test.csv\ncsv_file.close()\nO arquivo CSV que criamos, quando aberto em qualquer editor de planilhas, deve se parecer mais ou menos com a imagem abaixo.\n\n\n\n\n\nAgora vamos tentar ler o conteúdo do arquivo CSV."
+  },
+  {
+    "objectID": "pag12.html#lendo-arquivos-csv",
+    "href": "pag12.html#lendo-arquivos-csv",
+    "title": "13  Dia 7 - CSV",
+    "section": "13.2 Lendo arquivos CSV",
+    "text": "13.2 Lendo arquivos CSV\nRode read_csv.py\n\n\n\n\n\n# Importa o pacote CSV\nimport csv\n# Abre o arquivo test.csv\nwith open(\"test.csv\", 'r') as csv_file:\n# Cria o objeto csv.reader\ncsv_reader = csv.reader(csv_file)\n# Mostra na tela um a um\nfor row in csv_reader:\n print(row)\nAgora vamos tentar ler os dados de uma coluna separada.\nRode read_csv_one_column.py:\n\n\n\n\n\n# Importa o pacote CSV\nimport csv\n# Abre o arquivo test.csv\nwith open(\"test.csv\", 'r') as csv_file:\n# Cria o objeto csv reader\ncsv_reader = csv.reader(csv_file)\n# Um a um divide a string em colunas usando o delimitador ponto e vírgula (;)\nfor row in csv_reader:\n columns=row[0].split(\";\")\n# Mostra na tela a primeira coluna\nprint(columns[0])"
+  },
+  {
+    "objectID": "pag12.html#json-para-csv",
+    "href": "pag12.html#json-para-csv",
+    "title": "13  Dia 7 - CSV",
+    "section": "13.3 JSON para CSV",
+    "text": "13.3 JSON para CSV\nAlgumas vezes precisaremos converter os dados de JSON para CSV para tornar possível ser aberto em editores de planilhas. Para isso podemos usar o site https://csvjson.com/ (a melhor solução na minha opinião).\nAgora mostrarei como fazer isso usando Python para reforçar seu aprendizado dos últimos dias.\nRode json_to_csv.py\n\n\n\n\n\n# Importa os pacotes JSON, CSV e requests\nimport json\nimport requests\nimport csv\n# Faz uma requisição para API do GitHub.\nresponse = requests.get(\"https://api.github.com/search/users?q=javascript\")\n# Pega os dados no formato JSON.\njson_data=response.json()\n# Cria e abre simuntâneamente o arquivo test.csv.\ncsv_file = open('test.csv', 'w')\n# Cria o objeto csv_writer.\nwriter = csv.writer(csv_file, delimiter =';')\n# Conta o número de usuários encontrados.\nusersCount = len(json_data['items'])-1\n# Passa por cada dado, linha a linha, no JSON. Cria um objeto string vazio e adiciona login, link do perfil, link do avatar e escreve a string no arquivo CSV.\nfor x in range(usersCount):\n row = []\n row.append(json_data['items'][x]['login'])\n row.append(json_data['items'][x]['html_url'])\n row.append(json_data['items'][x]['avatar_url'])\n writer.writerow(row)\n# Fecha o arquivo test.csv.\ncsv_file.close()\nO conteúdo do arquivo test.csv deve ficar semelhante ao arquivo csv_to_json.py depois de executado."
   }
 ]

@@ -1,0 +1,229 @@
+# Dia 7 - CSV
+
+CSV (Comma-Separated Values) &#233; o formato mais popular de dados tabulares. A seguir um exemplo de como &#233; um arquivo CSV quando aberto em um editor de texto.
+
+![](img/ppo_32.png){fig-align="center"}
+
+
+
+E abaixo &#233; como fica quando abre em um editor apropriado (Google Sheets, Excel, etc).
+
+
+![](img/ppo_33.png){fig-align="center"}
+
+
+Agora vamos tentar criar um arquivo CSV usando o pacote *CSV* (<https://docs.python.org/3/library/csv.html>)
+
+
+## Escrevendo em arquivo CSV
+
+Rode `write_csv.py`:
+
+
+![](img/ppo_34.png){fig-align="center"}
+
+\#\ Importa o pacote CSV (est&#225; dispon&#237;vel por padr&#227;o)
+
+```python
+import csv
+```
+
+\#\ Abre e cria o arquivo `test.csv` 
+
+```python
+csv_file = open('test.csv', 'w')
+```
+
+\#\ Cria um objeto `write` e armazena o conte&#250;do do `csv_file`
+
+```python
+writer = csv.writer(csv_file, delimiter =';')
+```
+
+\#\ Cria uma lista com os cabe&#231;alhos
+
+```python
+header = ['Last name', 'First name', 'Age', 'Country']
+```
+
+\#\ Cria uma lista que preenche a primeira linha de cada campo
+
+```python
+data = ['Smith', 'John', '35', 'USA']
+```
+
+\#\ Escreve os dados do cabe&#231;alho no arquivo 
+
+```python
+writer.writerow(header)
+```
+
+\#\ Escreve os dados da linha no arquivo 
+
+```python
+writer.writerow(data)
+```
+
+\#\ Fecha o arquivo `test.csv`
+
+```python
+csv_file.close()
+```
+
+O arquivo CSV que criamos, quando aberto em qualquer editor de planilhas, deve se parecer mais ou menos com a imagem abaixo.
+
+
+
+![](img/ppo_35.png){fig-align="center"}
+
+
+Agora vamos tentar ler o conte&#250;do do arquivo CSV.
+
+## Lendo arquivos CSV
+
+Rode `read_csv.py`
+
+
+![](img/ppo_36.png){fig-align="center"}
+
+\#\ Importa o pacote CSV
+
+```python
+import csv
+```
+
+\#\ Abre o arquivo `test.csv`
+
+```python
+with open("test.csv", 'r') as csv_file:
+```
+
+\#\ Cria o objeto `csv.reader`
+
+```python
+csv_reader = csv.reader(csv_file)
+```
+
+\#\ Mostra na tela um a um
+
+```python
+for row in csv_reader:
+ print(row)
+```
+
+Agora vamos tentar ler os dados de uma coluna separada.
+
+Rode `read_csv_one_column.py`:
+
+
+![](img/ppo_37.png){fig-align="center"}
+
+
+\#\ Importa o pacote CSV
+
+```python
+import csv
+```
+
+\#\ Abre o arquivo `test.csv`
+
+```python
+with open("test.csv", 'r') as csv_file:
+```
+
+\#\ Cria o objeto `csv reader`
+
+```python
+csv_reader = csv.reader(csv_file)
+```
+
+\#\ Um a um divide a string em colunas usando o delimitador ponto e v&#237;rgula (;)
+
+```python
+for row in csv_reader:
+ columns=row[0].split(";")
+```
+
+\#\ Mostra na tela a primeira coluna
+
+```python
+print(columns[0])
+```
+
+![](img/ppo_38.png){fig-align="center"}
+
+
+## JSON para CSV
+
+Algumas vezes precisaremos converter os dados de JSON para CSV para tornar poss&#237;vel ser aberto em editores de planilhas. Para isso podemos usar o site <https://csvjson.com/> (**a melhor solu&#231;&#227;o na minha opini&#227;o**).
+
+Agora mostrarei como fazer isso usando Python para refor&#231;ar seu aprendizado dos &#250;ltimos dias.
+
+
+Rode `json_to_csv.py`
+
+![](img/ppo_39.png){fig-align="center"}
+
+
+
+
+\#\ Importa os pacotes *JSON*, *CSV* e *requests*
+
+```python
+import json
+import requests
+import csv
+```
+
+\#\ Faz uma requisi&#231;&#227;o para API do GitHub.
+
+```python
+response = requests.get("https://api.github.com/search/users?q=javascript")
+```
+
+\#\ Pega os dados no formato JSON.
+
+```python
+json_data=response.json()
+```
+
+\#\ Cria e abre simunt&#226;neamente o arquivo `test.csv`.
+
+```python
+csv_file = open('test.csv', 'w')
+```
+
+\#\ Cria o objeto `csv_writer`.
+
+```python
+writer = csv.writer(csv_file, delimiter =';')
+```
+
+\#\ Conta o n&#250;mero de usu&#225;rios encontrados.
+
+```python
+usersCount = len(json_data['items'])-1
+```
+
+\#\ Passa por cada dado, linha a linha, no JSON. Cria um objeto string vazio e adiciona login, link do perfil, link do avatar e escreve a string no arquivo CSV.
+
+```python
+for x in range(usersCount):
+ row = []
+ row.append(json_data['items'][x]['login'])
+ row.append(json_data['items'][x]['html_url'])
+ row.append(json_data['items'][x]['avatar_url'])
+ writer.writerow(row)
+```
+
+\#\ Fecha o arquivo `test.csv`.
+
+```python
+csv_file.close()
+```
+
+O conte&#250;do do arquivo `test.csv` deve ficar semelhante ao arquivo `csv_to_json.py` depois de executado.
+
+
+![](img/ppo_40.png){fig-align="center"}
+
