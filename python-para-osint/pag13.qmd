@@ -1,0 +1,34 @@
+# Dia 8 - Banco de dados
+
+Existem muitos pacotes Python para trabalhar com os banco de dados mais populares: MySQL, PostgreSQL, MongoDB, Redis, Elasticsearch etc. Decidi neste livro n&#227;o colocar exemplos de c&#243;digo de nenhum banco de dados, mas dar apenas algumas dicas &#250;teis.
+
+SQL (Structured Query Language) &#233; uma linguagem de consulta frequentemente usada em investiga&#231;&#245;es, assim como tamb&#233;m &#233; um formato de arquivo. Este formato consegue armazenar uma c&#243;pia de informa&#231;&#245;es do banco de dados (o chamado *dumps*) em que frequentemente conseguimos encontrar informa&#231;&#245;es &#250;teis de contatos (um exemplo comum &#233; uma lista de emails e n&#250;meros de telefones dos colaboradores de uma empresa). 
+
+Algumas vezes podem ser encontrados em pesquisas no Google.
+
+![](img/ppo_41.png){fig-align="center"} 
+
+
+
+Se fizermos uma pesquisa no [Google Hacking Database](https://www.exploit-db.com/google-hacking-database) por "sql", encontraremos cerca de 1500 exemplos de queries para encontrar dados em sql no Google.
+
+
+![](img/ppo_42.png){fig-align="center"}
+
+
+A maneira mais simples de visualizar estes arquivos &#233; convertendo em CSV e abrir em algum editor de planilha. Um site que pode ajudar com isto &#233; o [RebaseData](https://www.rebasedata.com/convert-sql-to-csv-online).
+
+
+![](img/ppo_43.png){fig-align="center"}
+
+
+Tamb&#233;m &#233; &#250;til para converter outros formatos de arquivos: MS Access (.MDB), SQL Server (.MDF), SQLite (.sqlite, .sqlite3, .db, .db3, .s3db, .sl3), Firebird (.FBD) e muitos outros.
+
+
+![](img/ppo_44.png){fig-align="center"}
+
+
+
+Al&#233;m destes existem outros sites que podem fazer o mesmo servi&#231;o, tais como: <https://anyconv.com/> e <https://www.101convert.com/>.
+
+Neste cap&#237;tulo n&#227;o rodaremos c&#243;digos. Como pr&#225;tica recomendo que encontre arquivos de banco de dados de contatos no Google, veja como eles est&#227;o organizados e os converta para CSV. Utilize o operador `filetype:pdf` e uma consulta simples do Google Hacking Database.  

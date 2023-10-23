@@ -21,6 +21,7 @@ book:
     - pag10.qmd
     - pag11.qmd
     - pag12.qmd
+    - pag13.qmd
 
 bibliography: references.bib
 
